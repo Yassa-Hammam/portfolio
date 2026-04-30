@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Yassa Hammam — Computer Science & AI student, Data Engineer, and Power BI Developer building intelligent data systems and analytical solutions." />
+  <meta name="keywords"
+    content="Yassa Hammam, Data Engineer, Data Analyst, Power BI, Python, AI, Machine Learning, Portfolio" />
+  <meta name="author" content="Yassa Hammam" />
+  <meta property="og:title" content="Yassa Hammam — Data Engineer & AI Enthusiast" />
+  <meta property="og:description"
+    content="CS & AI student specializing in Data Engineering, ETL Pipelines, and AI-driven analytics." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#060B18" />
+  <title>Yassa Hammam — Data Engineer & AI Enthusiast</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-bar" id="scroll-bar" role="progressbar" aria-label="Page scroll progress"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container">
+
+      <!-- LEFT: Logo -->
+      <a href="#" class="nav-logo">
+        <span class="logo-mark">YH</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <!-- CENTER: Menu -->
+      <ul class="nav-menu" id="nav-menu">
+
+        <li><a href="#about" class="nav-link" data-nav>About</a></li>
+        <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-nav>Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+        <li><a href="#education" class="nav-link" data-nav>Education</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+
+      </ul>
+
+      <!-- RIGHT: Actions -->
+      <div class="nav-actions">
+
+        <button class="theme-toggle" id="theme-toggle">
+          🌙
+        </button>
+
+        <a href="yassa-cv.pdf" class="nav-cta" id="cv-btn">
+          Download CV
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section id="hero" class="hero" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-orb orb-3"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge reveal" aria-label="Status: Open to work">
+            <span class="badge-pulse" aria-hidden="true"></span>
+            Knowledge isn't stored, it's engineered.
+          </div>
+
+          <h1 class="hero-name reveal delay-1">
+            <span class="name-first"> <i class="fa-solid fa-code"></i> Yassa</span>
+            <span class="name-last serif-italic">Hammam</span>
+          </h1>
+
+          <div class="hero-typewriter reveal delay-2" aria-live="polite">
+            <span class="type-prefix">I'm a</span>
+            <span class="type-text" id="type-text"></span>
+          </div>
+
+          <p class="hero-tagline reveal delay-3">
+            Transforming raw data into strategic insights —<br class="br-desktop" />
+            Engineering pipelines, dashboards, and intelligent systems.
+          </p>
+
+          <div class="hero-cta reveal delay-4">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+              </svg>
+              View Projects
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Contact Me
+            </a>
+
+          </div>
+
+          <div class="hero-metrics reveal delay-5" aria-label="Key statistics">
+
+
+
+
+
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-2" aria-hidden="true">
+          <div class="avatar-frame">
+            <div class="avatar-ring ring-spin"></div>
+            <div class="avatar-ring ring-spin-rev"></div>
+            <div class="avatar-inner">
+              <img src="profile.png" alt="Yassa Hammam" class="avatar-photo" loading="eager"
+                onerror="this.style.display='none';document.querySelector('.avatar-initials').style.display='flex'" />
+
+            </div>
+            <div class="avatar-glow"></div>
+          </div>
+
+          <div class="floating-card fc-1">
+            <span class="fc-icon">📊</span>
+            <span>Power BI</span>
+          </div>
+          <div class="floating-card fc-2">
+            <span class="fc-icon">🐍</span>
+            <span>Python</span>
+          </div>
+          <div class="floating-card fc-3">
+            <span class="fc-icon">🗄️</span>
+            <span>SQL</span>
+          </div>
+          <div class="floating-card fc-4">
+            <span class="fc-icon">🤖</span>
+            <span>AI / ML</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint reveal delay-5" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section id="about" class="section about-section" aria-label="About me">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">About Me</p>
+          <h2 class="section-title">
+            Building at the<br />intersection of
+            <em class="serif-italic accent-text"> Data &amp; AI</em>
+          </h2>
+        </div>
+
+      
+          <div class="about-text reveal">
+            <p>I'm a <strong>Computer Science &amp; Artificial Intelligence</strong> student at Helwan University with a
+              strong foundation in programming, data structures, databases, and analytics.</p>
+            <p>Experienced with industry-standard tools including <mark>Power BI, SQL, Excel,</mark> and
+              <mark>Tableau</mark>. My work spans end-to-end data workflows — from raw collection to actionable visual
+              insights.
+            </p>
+            <p>Deeply passionate about <strong> Data Engineering, ETL Pipelines, Cloud Data Systems,</strong> and
+              <strong>AI-driven analytics</strong>. Currently seeking internship opportunities to convert academic
+              foundations into real-world impact.
+            </p>
+
+            <div class="about-tags">
+              <span class="tag">Data Engineering</span>
+              <span class="tag">ETL Pipelines</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Cloud Systems</span>
+              <span class="tag">AI Analytics</span>
+              <span class="tag">Problem Solving</span>
+            </div>
+          </div>
+
+       
+        
+      </div>
+    </section>
+
+    <!-- ═══════════ SKILLS ═══════════ -->
+    <section id="skills" class="section skills-section" aria-label="Skills and technologies">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Technical Toolkit</p>
+          <h2 class="section-title">Skills &amp; <em class="serif-italic accent-text">Technologies</em></h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal delay-1">
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-code"
+                style="color: rgb(131, 69, 237);"></i></div>
+            <h3 class="skill-card-title">Programming Languages</h3>
+            <div class="skill-pills">
+              <span class="pill"><i class="fa-brands fa-python"></i><span> Python</span></span>
+
+              <span class="pill"><i class="fa-brands fa-java"></i><span> Java</span></span>
+
+              <span class="pill"><i class="fa-solid fa-c"></i><span> C</span></span>
+
+              <span class="pill"><i class="fa-brands fa-js"></i><span> JavaScript</span></span>
+
+              <span class="pill"><i class="fa-brands fa-html5"></i><span> HTML5</span></span>
+
+              <span class="pill"><i class="fa-brands fa-css3-alt"></i><span> CSS3</span></span>
+
+            </div>
+          </article>
+
+          <article class="skill-card reveal delay-2">
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-database"
+                style="color:rgb(131, 69, 237);"></i></div>
+            <h3 class="skill-card-title">Databases</h3>
+            <div class="skill-pills">
+              <span class="pill"> SQL</span>
+              <span class="pill"> MySQL</span>
+              <span class="pill"> DBMS</span>
+
+
+            </div>
+          </article>
+
+          <article class="skill-card reveal delay-3">
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-chart"
+                style="color:rgb(131, 69, 237);"></i></div>
+            <h3 class="skill-card-title">Data &amp; Analytics</h3>
+            <div class="skill-pills">
+              <span class="pill">Power BI</span>
+              <span class="pill">Excel</span>
+              <span class="pill">Tableau</span>
+              <span class="pill">Kaggle</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal delay-4">
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-lightbulb"
+                style="color:rgb(131, 69, 237);"></i></div>
+            <h3 class="skill-card-title">Core Concepts</h3>
+            <div class="skill-pills">
+              <span class="pill">ETL</span>
+              <span class="pill">Data Cleaning</span>
+              <span class="pill">Data Visualization</span>
+              <span class="pill">Data Structures</span>
+              <span class="pill">OOP</span>
+              <span class="pill">Data Mining</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ EXPERIENCE ═══════════ -->
+    <section id="experience" class="section experience-section" aria-label="Work experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Work Experience</p>
+          <h2 class="section-title">Professional <em class="serif-italic accent-text">Experience</em></h2>
+        </div>
+
+        <div class="timeline">
+          <article class="exp-card reveal" aria-label="Data Analysis Trainee at NTI">
+
+
+            <!-- start of certification -->
+            <div class="exp-marker" aria-hidden="true">
+              <span class="marker-dot"></span>
+              <span class="marker-line"></span>
+            </div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <div class="exp-logo" aria-hidden="true">📡</div>
+                <div class="exp-meta">
+                  <h3 class="exp-role">Data Analysis Trainee</h3>
+                  <p class="exp-company">National Telecommunication Institute (NTI)</p>
+                  <p class="exp-period">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      aria-hidden="true">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                      <line x1="16" y1="2" x2="16" y2="6" />
+                      <line x1="8" y1="2" x2="8" y2="6" />
+                      <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                    Remote Training · 2024
+                  </p>
+                </div>
+                <span class="exp-badge">Training</span>
+              </div>
+              <ul class="exp-list" role="list">
+                <li>Data collection &amp; preprocessing for real-world datasets</li>
+                <li>SQL-based analysis and query optimization techniques</li>
+                <li>Excel reporting with advanced formulas and pivot tables</li>
+                <li>Power BI dashboard development and interactive visualizations</li>
+                <li>Extracting statistical insights from complex, large-scale datasets</li>
+                <li>Completed end-to-end real-world data analysis projects</li>
+              </ul>
+              <div class="exp-skills">
+                <span class="pill pill-sm">SQL</span>
+                <span class="pill pill-sm">Power BI</span>
+                <span class="pill pill-sm">Excel</span>
+                <span class="pill pill-sm">Data Analysis</span>
+              </div>
+            </div>
+            <!-- end of certification -->
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PROJECTS ═══════════ -->
+    <section id="projects" class="section projects-section" aria-label="Portfolio projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Portfolio</p>
+          <h2 class="section-title">Featured <em class="serif-italic accent-text">Projects</em></h2>
+        </div>
+
+        <div class="tab-group reveal" role="tablist" aria-label="Project categories">
+          <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-web" id="btn-web"
+            data-tab="web">
+            🌐 Web Development
+          </button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-data" id="btn-data" data-tab="data">
+            📊 Data Analytics
+          </button>
+        </div>
+
+        <!-- Web Projects -->
+        <div class="projects-panel active" id="tab-web" role="tabpanel" aria-labelledby="btn-web">
+          <div class="projects-grid">
+
+            <article class="proj-card reveal" aria-label="Restaurant Website project">
+              <div class="proj-card-inner">
+                <header class="proj-header">
+                  <span class="proj-num">01</span>
+                  <span class="proj-badge badge-web">Web Dev</span>
+                </header>
+                <h3 class="proj-title">🍽️ Restaurant Website</h3>
+                <p class="proj-desc">A modern digital presence for small restaurants — featuring menu showcasing, smooth
+                  UX, and a mobile-first layout to improve customer engagement across all devices.</p>
+                <div class="proj-stack">
+                  <span class="pill pill-sm">HTML5</span>
+                  <span class="pill pill-sm">CSS3</span>
+                  <span class="pill pill-sm">JavaScript</span>
+                </div>
+                <ul class="proj-features" role="list">
+                  <li>Fully responsive mobile-first design</li>
+                  <li>Interactive menu browsing system</li>
+                  <li>Smooth scroll navigation &amp; animations</li>
+                  <li>Clean, conversion-optimized UI</li>
+                </ul>
+                <div class="proj-outcome">
+                  <strong>Outcome:</strong> Improved digital presence with a structured, conversion-friendly UI.
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal delay-2" aria-label="Tourism Website project">
+              <div class="proj-card-inner">
+                <header class="proj-header">
+                  <span class="proj-num">02</span>
+                  <span class="proj-badge badge-web">Web Dev</span>
+                </header>
+                <h3 class="proj-title">✈️ Tourism Website</h3>
+                <p class="proj-desc">An immersive digital platform for tourism destinations — showcasing places,
+                  attractions, and encouraging visitor exploration through visual storytelling and interactive elements.
+                </p>
+                <div class="proj-stack">
+                  <span class="pill pill-sm">HTML5</span>
+                  <span class="pill pill-sm">CSS3</span>
+                  <span class="pill pill-sm">JavaScript</span>
+                </div>
+                <ul class="proj-features" role="list">
+                  <li>Responsive destination showcase sections</li>
+                  <li>Smooth scrolling navigation</li>
+                  <li>Interactive UI components</li>
+                  <li>Visual storytelling layout</li>
+                </ul>
+                <div class="proj-outcome">
+                  <strong>Outcome:</strong> Enhanced user engagement through an immersive browsing experience.
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Data Projects -->
+        <div class="projects-panel" id="tab-data" role="tabpanel" aria-labelledby="btn-data" hidden>
+          <div class="projects-grid">
+
+            <article class="proj-card reveal" aria-label="Spotify Data Analysis project">
+              <div class="proj-card-inner">
+                <header class="proj-header">
+                  <span class="proj-num">03</span>
+                  <span class="proj-badge badge-data">Data Analytics</span>
+                </header>
+                <h3 class="proj-title">🎵 Spotify Data Analysis</h3>
+                <p class="proj-desc">Deep-dive analysis of music streaming trends and user behavior patterns from a
+                  large Spotify dataset to uncover actionable business insights and consumption patterns.</p>
+                <div class="proj-stack">
+                  <span class="pill pill-sm">Excel</span>
+                  <span class="pill pill-sm">Power BI</span>
+                  <span class="pill pill-sm">Kaggle</span>
+                </div>
+                <ul class="proj-features" role="list">
+                  <li>Top artists and trending tracks analysis</li>
+                  <li>Genre distribution breakdown</li>
+                  <li>Listening trends over time</li>
+                  <li>User behavior pattern identification</li>
+                </ul>
+                <div class="proj-outcome">
+                  <strong>Outcome:</strong> Clear insights into music consumption patterns via interactive dashboards.
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal delay-1" aria-label="Amazon Sales Analysis project">
+              <div class="proj-card-inner">
+                <header class="proj-header">
+                  <span class="proj-num">04</span>
+                  <span class="proj-badge badge-data">Data Analytics</span>
+                </header>
+                <h3 class="proj-title">🛒 Amazon Sales Analysis</h3>
+                <p class="proj-desc">Comprehensive analysis of product sales performance and customer behavior to
+                  identify business opportunities, top-performing categories, and revenue growth drivers.</p>
+                <div class="proj-stack">
+                  <span class="pill pill-sm">Excel</span>
+                  <span class="pill pill-sm">Power BI</span>
+                  <span class="pill pill-sm">Kaggle</span>
+                </div>
+                <ul class="proj-features" role="list">
+                  <li>Top-performing products ranking</li>
+                  <li>Revenue trend analysis</li>
+                  <li>Category performance breakdown</li>
+                  <li>Customer segmentation insights</li>
+                </ul>
+                <div class="proj-outcome">
+                  <strong>Outcome:</strong> Identified key business opportunities from sales data patterns.
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal delay-2" aria-label="Electric Vehicles Dashboard project">
+              <div class="proj-card-inner">
+                <header class="proj-header">
+                  <span class="proj-num">05</span>
+                  <span class="proj-badge badge-data">Data Analytics</span>
+                </header>
+                <h3 class="proj-title">⚡ Electric Vehicles Dashboard</h3>
+                <p class="proj-desc">Comprehensive EV market landscape analysis covering 264 models, 35+ brands, range
+                  metrics, and adoption trends — delivered across Power BI and Tableau dashboards.</p>
+                <div class="proj-stack">
+                  <span class="pill pill-sm">Excel</span>
+                  <span class="pill pill-sm">Power BI</span>
+                  <span class="pill pill-sm">Tableau</span>
+                  <span class="pill pill-sm">Kaggle</span>
+                </div>
+                <ul class="proj-features" role="list">
+                  <li>264 EV models analyzed in depth</li>
+                  <li>35+ brands compared side-by-side</li>
+                  <li>Range &amp; performance metrics mapped</li>
+                  <li>Market adoption trends visualized</li>
+                </ul>
+                <div class="proj-outcome">
+                  <strong>Outcome:</strong> Comprehensive EV industry landscape with actionable market insights.
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ EDUCATION ═══════════ -->
+    <section id="education" class="section education-section" aria-label="Education and certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Academic Background</p>
+          <h2 class="section-title">Education &amp; <em class="serif-italic accent-text">Certifications</em></h2>
+        </div>
+
+        <div class="edu-grid">
+          <article class="edu-card reveal" aria-label="Helwan University degree">
+            <div class="edu-card-top">
+              <div class="edu-icon" aria-hidden="true">🎓</div>
+              <div class="edu-info">
+                <h3 class="edu-degree">Computer Science &amp; Artificial Intelligence</h3>
+                <p class="edu-uni">Helwan University</p>
+              </div>
+            </div>
+            <p class="edu-desc">Pursuing a Bachelor's degree with focus on algorithms, machine learning, data systems,
+              and software engineering fundamentals.</p>
+            <div class="edu-badges">
+              <span class="edu-badge">2024 – 2028</span>
+              <span class="edu-badge edu-badge-gpa">GPA: 3.15 / 4.0</span>
+              <span class="edu-badge">Bachelor's Degree</span>
+            </div>
+          </article>
+
+          <div class="certs-column reveal delay-2">
+            <h3 class="certs-title">Certifications</h3>
+            <article class="cert-card" aria-label="NTI Data Analytics certification">
+              <div class="cert-icon" aria-hidden="true">📈</div>
+              <div class="cert-info">
+                <h4 class="cert-name">Data Analytics Certification</h4>
+                <p class="cert-issuer">National Telecommunication Institute · NTI</p>
+              </div>
+              <div class="cert-check" aria-label="Verified" aria-hidden="true">✓</div>
+            </article>
+            <article class="cert-card" aria-label="NVIDIA Deep Learning certification">
+              <div class="cert-icon" aria-hidden="true">🧠</div>
+              <div class="cert-info">
+                <h4 class="cert-name">Getting Started with Deep Learning</h4>
+                <p class="cert-issuer">NVIDIA · Deep Learning Institute</p>
+              </div>
+              <div class="cert-check" aria-label="Verified" aria-hidden="true">✓</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ WHY HIRE ME ═══════════ -->
+    <section id="why" class="section why-section" aria-label="Why hire me">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Value Proposition</p>
+          <h2 class="section-title">Why <em class="serif-italic accent-text">Hire Me?</em></h2>
+        </div>
+
+        <div class="why-grid">
+          <div class="traits-grid reveal">
+            <div class="trait-card">
+              <span class="trait-icon" aria-hidden="true">🧩</span>
+              <span class="trait-name">Problem Solving</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon" aria-hidden="true">📐</span>
+              <span class="trait-name">Analytical Thinking</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon" aria-hidden="true">⚡</span>
+              <span class="trait-name">Fast Learner</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon" aria-hidden="true">🤝</span>
+              <span class="trait-name">Team Player</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon" aria-hidden="true">🤖</span>
+              <span class="trait-name">Passion for AI</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon" aria-hidden="true">🔄</span>
+              <span class="trait-name">Adaptability</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon" aria-hidden="true">🌱</span>
+              <span class="trait-name">Growth Mindset</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon" aria-hidden="true">🎯</span>
+              <span class="trait-name">Goal-Oriented</span>
+            </div>
+          </div>
+
+          <div class="why-achievements reveal delay-2">
+            <div class="achieve-card">
+              <div class="achieve-num counter" data-count="10">0</div>
+              <div class="achieve-details">
+                <strong>Projects Built</strong>
+                <p>From web apps to data analytics dashboards</p>
+              </div>
+            </div>
+            <div class="achieve-card">
+              <div class="achieve-num">3.15</div>
+              <div class="achieve-details">
+                <strong>GPA Score</strong>
+                <p>Strong academic performance in CS &amp; AI</p>
+              </div>
+            </div>
+            <div class="achieve-card">
+              <div class="achieve-num counter" data-count="2">0</div>
+              <div class="achieve-details">
+                <strong>Certifications</strong>
+                <p>NTI Data Analytics + NVIDIA Deep Learning</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section id="contact" class="section contact-section" aria-label="Contact">
+      <div class="container">
+        <div class="section-header reveal" style="text-align:center">
+          <p class="section-eyebrow" style="justify-content:center">Get In Touch</p>
+          <h2 class="section-title">Let's <em class="serif-italic accent-text">Connect</em></h2>
+          <p class="contact-sub">Open to internship opportunities, data engineering roles, and collaborations. Let's
+            build something impactful together.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <a href="mailto:yassahammam.business@gmail.com" class="contact-link">
+              <div class="contact-link-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-val">yassahammam.business@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/201010204011" target="_blank" rel="noopener noreferrer" class="contact-link"
+              aria-label="Chat on WhatsApp" title="Send WhatsApp message">
+              <div class="contact-link-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.52 3.48A11.91 11.91 0 0 0 12.06 0C5.41 0 .02 5.39.02 12.03c0 2.12.55 4.2 1.6 6.03L0 24l6.12-1.6a11.94 11.94 0 0 0 5.94 1.52h.01c6.64 0 12.03-5.39 12.03-12.03 0-3.2-1.25-6.21-3.58-8.41zM12.07 22c-1.89 0-3.75-.5-5.38-1.44l-.39-.23-3.63.95.97-3.54-.25-.41A9.94 9.94 0 0 1 2.1 12.03c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.16 1.04 7.04 2.92a9.94 9.94 0 0 1 2.92 7.04c0 5.5-4.47 9.97-9.97 9.97zm5.49-7.47c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.1 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" />
+                </svg>
+              </div>
+
+              <div class="contact-link-text">
+                <span class="contact-link-label">WhatsApp</span>
+                <span class="contact-link-val">Chat with me</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/yassa-hammam" target="_blank" rel="noopener noreferrer"
+              class="contact-link">
+              <div class="contact-link-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-val">linkedin.com/in/yassa-hammam</span>
+              </div>
+            </a>
+            <a href="https://github.com/Yassa-Hammam" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="contact-link-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-val">github.com/Yassa-Hammam</span>
+              </div>
+            </a>
+
+
+            <a href="https://www.instagram.com/yassa_hammam?igsh=MXJ0bW15NjQ4ZHdyYQ==" target="_blank"
+              rel="noopener noreferrer" class="contact-link">
+              <div class="contact-link-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm0 2C5.7 4 4 5.7 4 7.8v8.4C4 18.3 5.7 20 7.8 20h8.4c2.1 0 3.8-1.7 3.8-3.8V7.8C20 5.7 18.3 4 16.2 4H7.8zm4.2 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2A3 3 0 1 0 12 15a3 3 0 0 0 0-6zm4.8-.9a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z" />
+                </svg>
+              </div>
+
+              <div class="contact-link-text">
+                <span class="contact-link-label">Instagram</span>
+                <span class="contact-link-val">@yassa_hammam</span>
+              </div>
+            </a>
+
+
+          </div>
+
+          <div class="contact-form-wrap reveal delay-2">
+            <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+
+              <!-- Name -->
+              <div class="form-group">
+                <label for="cf-name" class="form-label">Your Name</label>
+                <input type="text" id="cf-name" name="name" class="form-control" placeholder="John Doe" required
+                  autocomplete="name" aria-describedby="name-error" />
+                <span class="form-error" id="name-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="cf-email" class="form-label">Email Address</label>
+                <input type="email" id="cf-email" name="email" class="form-control" placeholder="john@company.com"
+                  required autocomplete="email" aria-describedby="email-error" />
+                <span class="form-error" id="email-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Subject -->
+              <div class="form-group">
+                <label for="cf-subject" class="form-label">Subject</label>
+                <input type="text" id="cf-subject" name="subject" class="form-control"
+                  placeholder="Internship Opportunity" autocomplete="off" />
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="cf-msg" class="form-label">Message</label>
+                <textarea id="cf-msg" name="message" class="form-control"
+                  placeholder="Tell me about your opportunity or project..." required rows="5"
+                  aria-describedby="message-error"></textarea>
+                <span class="form-error" id="message-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+
+                <span id="btn-text">Send Message</span>
+              </button>
+
+              <!-- Success -->
+              <div class="form-success" id="form-success" role="alert" hidden>
+                ✅ Message sent! I'll get back to you shortly.
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+
+    <div class="footer-left">
+      <a href="#hero" class="footer-logo" aria-label="Back to top">
+        <span class="logo-mark">YH</span>
+        <span class="logo-dot" aria-hidden="true"></span>
+      </a>
+
+      <p class="footer-copy">
+        © <span id="footer-year"></span> Yassa Hammam. All rights reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="back-top" aria-label="Back to top" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      aria-hidden="true">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
