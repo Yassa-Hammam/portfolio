@@ -1,7 +1,4 @@
-/* ════════════════════════════════════════════
-   YASSA HAMMAM — PORTFOLIO STYLESHEET
-   Midnight Lab Aesthetic · Mobile-First
-   ════════════════════════════════════════════ */
+
 
 /* ── CSS Reset & Base ── */
 *, *::before, *::after {
@@ -1769,51 +1766,63 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
 }
 
+/* خلفية دائرية مرنة */
 .contact-section::before {
   content: '';
   position: absolute;
-  top: -50%; left: 50%;
-  transform: translateX(-50%);
-  width: 600px; height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(600px, 90vw);
+  height: min(600px, 90vw);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(0, 229, 255, 0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 
+/* نص الوصف */
 .contact-sub {
   color: var(--text-2);
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   max-width: 460px;
   margin: var(--sp-2) auto 0;
   line-height: 1.65;
+  padding: 0 1rem;
 }
 
+/* GRID */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--sp-4);
+  gap: clamp(1rem, 3vw, 2rem);
   align-items: start;
 }
 
 @media (min-width: 768px) {
-  .contact-grid { grid-template-columns: 1fr 1.2fr; }
+  .contact-grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
 }
 
+/* INFO LIST */
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: var(--sp-2);
+  min-width: 0;
 }
 
+/* CARD */
 .contact-link {
   display: flex;
   align-items: center;
-  gap: var(--sp-3);
-  padding: var(--sp-3);
+  gap: clamp(0.6rem, 2vw, 1rem);
+  padding: clamp(10px, 2vw, 16px);
   border-radius: var(--r-md);
   background: var(--surface);
   border: 1px solid var(--border);
-  transition: border-color var(--dur-fast), transform var(--dur-fast) var(--ease-spring), box-shadow var(--dur);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  min-width: 0;
 }
 
 .contact-link:hover {
@@ -1822,9 +1831,10 @@ a { text-decoration: none; color: inherit; }
   box-shadow: var(--glow-cyan);
 }
 
+/* ICON */
 .contact-link-icon {
-  width: 44px;
-  height: 44px;
+  width: clamp(36px, 4vw, 44px);
+  height: clamp(36px, 4vw, 44px);
   border-radius: var(--r-sm);
   background: linear-gradient(135deg, var(--cyan-dim), rgba(176, 140, 254, 0.12));
   border: 1px solid var(--border-2);
@@ -1833,11 +1843,9 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
   color: var(--cyan);
   flex-shrink: 0;
-  transition: background var(--dur-fast);
 }
 
-.contact-link:hover .contact-link-icon { background: var(--cyan-dim); }
-
+/* TEXT */
 .contact-link-label {
   display: block;
   font-family: var(--font-mono);
@@ -1850,19 +1858,21 @@ a { text-decoration: none; color: inherit; }
 
 .contact-link-val {
   display: block;
-  font-size: 0.875rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
   color: var(--text);
   font-weight: 500;
 }
 
-/* Contact Form */
+/* FORM WRAPPER */
 .contact-form-wrap {
-  padding: var(--sp-5);
+  padding: clamp(1rem, 3vw, 2rem);
   border-radius: var(--r-xl);
   background: var(--surface);
   border: 1px solid var(--border);
+  min-width: 0;
 }
 
+/* FORM */
 .form-group {
   margin-bottom: var(--sp-3);
 }
@@ -1877,6 +1887,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-2);
 }
 
+/* INPUTS */
 .form-control {
   width: 100%;
   padding: 11px 16px;
@@ -1884,17 +1895,15 @@ a { text-decoration: none; color: inherit; }
   background: var(--surface-2);
   border: 1px solid var(--border);
   color: var(--text);
-  font-family: var(--font-body);
   font-size: 0.9rem;
-  line-height: 1.5;
-  transition: border-color var(--dur-fast), background var(--dur-fast), box-shadow var(--dur-fast);
+  transition: all 0.2s ease;
   outline: none;
-  resize: vertical;
-  -webkit-appearance: none;
-  appearance: none;
+  resize: none;
 }
 
-.form-control::placeholder { color: var(--text-3); }
+.form-control::placeholder {
+  color: var(--text-3);
+}
 
 .form-control:focus {
   border-color: var(--cyan);
@@ -1902,8 +1911,21 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.12);
 }
 
-.form-control.error { border-color: #FF6B6B; }
-.form-error { display: block; font-size: 0.72rem; color: #FF6B6B; margin-top: 4px; min-height: 16px; }
+.form-control:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.form-control.error {
+  border-color: #ff6b6b;
+}
+
+.form-error {
+  font-size: 0.72rem;
+  color: #ff6b6b;
+  margin-top: 4px;
+  min-height: 16px;
+}
 
 .form-success {
   text-align: center;
