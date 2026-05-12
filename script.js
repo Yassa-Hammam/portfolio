@@ -1,7 +1,4 @@
-/**
- * YASSA HAMMAM — PORTFOLIO SCRIPT
- * Clean, modular, production-ready JavaScript
- * =========================================== */
+
 
 'use strict';
 
@@ -13,11 +10,11 @@ const $$ = (selector, context = document) => [...context.querySelectorAll(select
    THEME TOGGLE (Dark / Light)
    ════════════════════════════════════════════ */
 function initTheme() {
-  const html   = document.documentElement;
+  const html = document.documentElement;
   const toggle = $('#theme-toggle');
   const stored = localStorage.getItem('portfolio-theme');
   const prefer = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-  const theme  = stored || prefer;
+  const theme = stored || prefer;
 
   html.setAttribute('data-theme', theme);
 
@@ -32,10 +29,10 @@ function initTheme() {
    NAVIGATION
    ════════════════════════════════════════════ */
 function initNav() {
-  const header    = $('#site-header');
+  const header = $('#site-header');
   const hamburger = $('#hamburger');
-  const navMenu   = $('#nav-menu');
-  const navLinks  = $$('[data-nav]');
+  const navMenu = $('#nav-menu');
+  const navLinks = $$('[data-nav]');
 
   /* Scroll-based header styling */
   window.addEventListener('scroll', () => {
@@ -112,8 +109,8 @@ function initScrollProgress() {
 
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
-    const total    = document.body.scrollHeight - window.innerHeight;
-    const pct      = total > 0 ? (scrolled / total) * 100 : 0;
+    const total = document.body.scrollHeight - window.innerHeight;
+    const pct = total > 0 ? (scrolled / total) * 100 : 0;
     bar.style.width = `${Math.min(pct, 100)}%`;
   }, { passive: true });
 }
@@ -146,7 +143,8 @@ function initTypewriter() {
   const el = $('#type-text');
   if (!el) return;
 
-  const phrases = [
+  const rawPhrases = el.getAttribute('data-phrases');
+  let phrases = [
     'Data Engineer',
     'Data Analyst',
     'Power BI Developer',
@@ -154,9 +152,16 @@ function initTypewriter() {
     'Python Developer',
     'ETL Engineer',
   ];
+  if (rawPhrases) {
+    try {
+      phrases = JSON.parse(rawPhrases);
+    } catch (e) {
+      console.error('Invalid JSON in data-phrases attribute', e);
+    }
+  }
 
-  let phraseIdx  = 0;
-  let charIdx    = 0;
+  let phraseIdx = 0;
+  let charIdx = 0;
   let isDeleting = false;
 
   function tick() {
@@ -176,9 +181,9 @@ function initTypewriter() {
       delay = 1800;
       isDeleting = true;
     } else if (isDeleting && charIdx === 0) {
-      isDeleting  = false;
-      phraseIdx   = (phraseIdx + 1) % phrases.length;
-      delay       = 350;
+      isDeleting = false;
+      phraseIdx = (phraseIdx + 1) % phrases.length;
+      delay = 350;
     }
 
     setTimeout(tick, delay);
@@ -217,13 +222,13 @@ function initCounters() {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
 
-        const el     = entry.target;
+        const el = entry.target;
         const target = parseInt(el.dataset.count, 10);
         if (isNaN(target)) return;
 
         const duration = 1400;
         const stepTime = Math.max(Math.floor(duration / target), 14);
-        let current    = 0;
+        let current = 0;
 
         const timer = setInterval(() => {
           current++;
@@ -244,7 +249,7 @@ function initCounters() {
    PROJECT TABS
    ════════════════════════════════════════════ */
 function initTabs() {
-  const tabs   = $$('.tab');
+  const tabs = $$('.tab');
   const panels = $$('.projects-panel');
 
   tabs.forEach(tab => {
@@ -281,70 +286,10 @@ function initTabs() {
 }
 
 /* ════════════════════════════════════════════
-   CUSTOM CURSOR (pointer devices only)
-   ════════════════════════════════════════════ */
-function initCursor() {
-  if (!window.matchMedia('(pointer: fine)').matches) return;
-
-  const cursor = $('#cursor');
-  const trail  = $('#cursor-trail');
-  if (!cursor || !trail) return;
-
-  let mouseX = 0, mouseY = 0;
-  let trailX = 0, trailY = 0;
-  let rafId;
-
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursor.style.left = `${mouseX}px`;
-    cursor.style.top  = `${mouseY}px`;
-  });
-
-  function animateTrail() {
-    trailX += (mouseX - trailX) * 0.14;
-    trailY += (mouseY - trailY) * 0.14;
-    trail.style.left = `${trailX}px`;
-    trail.style.top  = `${trailY}px`;
-    rafId = requestAnimationFrame(animateTrail);
-  }
-
-  animateTrail();
-
-  /* Hover state on interactive elements */
-  const interactiveSelector = 'a, button, .tab, .pill, .trait-card, .proj-card, .cert-card, .contact-link';
-
-  document.addEventListener('mouseover', (e) => {
-    if (e.target.closest(interactiveSelector)) {
-      cursor.classList.add('hover');
-      trail.classList.add('hover');
-    }
-  });
-
-  document.addEventListener('mouseout', (e) => {
-    if (e.target.closest(interactiveSelector)) {
-      cursor.classList.remove('hover');
-      trail.classList.remove('hover');
-    }
-  });
-
-  /* Hide on leave */
-  document.addEventListener('mouseleave', () => {
-    cursor.style.opacity = '0';
-    trail.style.opacity  = '0';
-  });
-
-  document.addEventListener('mouseenter', () => {
-    cursor.style.opacity = '';
-    trail.style.opacity  = '';
-  });
-}
-
-/* ════════════════════════════════════════════
    CONTACT FORM
    ════════════════════════════════════════════ */
 function initContactForm() {
-  const form    = $('#contact-form');
+  const form = $('#contact-form');
   const btnText = $('#btn-text');
   const success = $('#form-success');
 
@@ -384,9 +329,9 @@ function initContactForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const nameField  = $('#cf-name');
+    const nameField = $('#cf-name');
     const emailField = $('#cf-email');
-    const msgField   = $('#cf-msg');
+    const msgField = $('#cf-msg');
     let valid = true;
 
     if (!nameField?.value.trim()) {
@@ -417,7 +362,7 @@ function initContactForm() {
     btnText.textContent = 'Sending…';
 
     setTimeout(() => {
-      btn.style.display  = 'none';
+      btn.style.display = 'none';
       success.removeAttribute('hidden');
       success.style.display = 'block';
       form.reset();
@@ -469,31 +414,10 @@ function initSmoothScroll() {
 
       e.preventDefault();
       const offset = 76; /* header height */
-      const top    = target.getBoundingClientRect().top + window.scrollY - offset;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
-}
-
-/* ════════════════════════════════════════════
-   STAT FILL ANIMATION
-   ════════════════════════════════════════════ */
-function initStatFill() {
-  const fills = $$('.stat-fill');
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          /* The CSS transition handles the animation once class is added */
-          entry.target.style.transitionDelay = '0.3s';
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  fills.forEach(fill => observer.observe(fill));
 }
 
 /* ════════════════════════════════════════════
@@ -508,12 +432,10 @@ function init() {
   initScrollReveal();
   initCounters();
   initTabs();
-  initCursor();
   initContactForm();
   initCVButton();
   initFooterYear();
   initSmoothScroll();
-  initStatFill();
 }
 
 /* Run when DOM is ready */

@@ -39,7 +39,7 @@
     <nav class="nav container">
 
       <!-- LEFT: Logo -->
-      <a href="#" class="nav-logo">
+      <a href="#" class="nav-logo" aria-label="Home">
         <span class="logo-mark">YH</span>
         <span class="logo-dot"></span>
       </a>
@@ -59,16 +59,17 @@
       <!-- RIGHT: Actions -->
       <div class="nav-actions">
 
-        <button class="theme-toggle" id="theme-toggle">
-          🌙
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
         </button>
 
- <a href="https://drive.google.com/file/d/137cuuMXwLK-u0kP9s475KQfJAaTY1ZmQ/view?usp=sharing" 
-   class="nav-cta" id="cv-btn" target="_blank">
-  View CV
-</a>
+        <a href="https://drive.google.com/file/d/137cuuMXwLK-u0kP9s475KQfJAaTY1ZmQ/view?usp=sharing" class="nav-cta"
+          id="cv-btn" target="_blank">
+          View CV
+        </a>
 
-        <button class="hamburger" id="hamburger" aria-expanded="false">
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
           <span></span>
@@ -104,7 +105,8 @@
 
           <div class="hero-typewriter reveal delay-2" aria-live="polite">
             <span class="type-prefix">I'm a</span>
-            <span class="type-text" id="type-text"></span>
+            <span class="type-text" id="type-text"
+              data-phrases='["Data Engineer", "Data Analyst", "Power BI Developer", "AI Enthusiast", "Python Developer", "ETL Engineer"]'></span>
           </div>
 
           <p class="hero-tagline reveal delay-3">
@@ -133,14 +135,6 @@
             </a>
 
           </div>
-
-          <div class="hero-metrics reveal delay-5" aria-label="Key statistics">
-
-
-
-
-
-          </div>
         </div>
 
         <div class="hero-visual reveal delay-2" aria-hidden="true">
@@ -148,7 +142,7 @@
             <div class="avatar-ring ring-spin"></div>
             <div class="avatar-ring ring-spin-rev"></div>
             <div class="avatar-inner">
-              <img src="profile.png" alt="Yassa Hammam" class="avatar-photo" loading="lazy"
+              <img src="profile.png" alt="Yassa Hammam" class="avatar-photo" loading="eager"
                 onerror="this.style.display='none';document.querySelector('.avatar-initials').style.display='flex'" />
 
             </div>
@@ -191,31 +185,27 @@
           </h2>
         </div>
 
-      
-          <div class="about-text reveal">
-            <p>I'm a <strong>Computer Science &amp; Artificial Intelligence</strong> student at Helwan University with a
-              strong foundation in programming, data structures, databases, and analytics.</p>
-            <p>Experienced with industry-standard tools including <mark>Power BI, SQL, Excel,</mark> and
-              <mark>Tableau</mark>. My work spans end-to-end data workflows — from raw collection to actionable visual
-              insights.
-            </p>
-            <p>Deeply passionate about <strong> Data Engineering, ETL Pipelines, Cloud Data Systems,</strong> and
-              <strong>AI-driven analytics</strong>. Currently seeking internship opportunities to convert academic
-              foundations into real-world impact.
-            </p>
+        <div class="about-text reveal">
+          <p>I'm a <strong>Computer Science &amp; Artificial Intelligence</strong> student at Helwan University with a
+            strong foundation in programming, data structures, databases, and analytics.</p>
+          <p>Experienced with industry-standard tools including <mark>Power BI, SQL, Excel,</mark> and
+            <mark>Tableau</mark>. My work spans end-to-end data workflows — from raw collection to actionable visual
+            insights.
+          </p>
+          <p>Deeply passionate about <strong> Data Engineering, ETL Pipelines, Cloud Data Systems,</strong> and
+            <strong>AI-driven analytics</strong>. Currently seeking internship opportunities to convert academic
+            foundations into real-world impact.
+          </p>
 
-            <div class="about-tags">
-              <span class="tag">Data Engineering</span>
-              <span class="tag">ETL Pipelines</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Cloud Systems</span>
-              <span class="tag">AI Analytics</span>
-              <span class="tag">Problem Solving</span>
-            </div>
+          <div class="about-tags">
+            <span class="tag">Data Engineering</span>
+            <span class="tag">ETL Pipelines</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Cloud Systems</span>
+            <span class="tag">AI Analytics</span>
+            <span class="tag">Problem Solving</span>
           </div>
-
-       
-        
+        </div>
       </div>
     </section>
 
@@ -229,8 +219,7 @@
 
         <div class="skills-grid">
           <article class="skill-card reveal delay-1">
-            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-code"
-                style="color: rgb(131, 69, 237);"></i></div>
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
             <h3 class="skill-card-title">Programming Languages</h3>
             <div class="skill-pills">
               <span class="pill"><i class="fa-brands fa-python"></i><span> Python</span></span>
@@ -249,8 +238,7 @@
           </article>
 
           <article class="skill-card reveal delay-2">
-            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-database"
-                style="color:rgb(131, 69, 237);"></i></div>
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-database"></i></div>
             <h3 class="skill-card-title">Databases</h3>
             <div class="skill-pills">
               <span class="pill"> SQL</span>
@@ -262,8 +250,7 @@
           </article>
 
           <article class="skill-card reveal delay-3">
-            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-chart"
-                style="color:rgb(131, 69, 237);"></i></div>
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
             <h3 class="skill-card-title">Data &amp; Analytics</h3>
             <div class="skill-pills">
               <span class="pill">Power BI</span>
@@ -274,8 +261,7 @@
           </article>
 
           <article class="skill-card reveal delay-4">
-            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-lightbulb"
-                style="color:rgb(131, 69, 237);"></i></div>
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></div>
             <h3 class="skill-card-title">Core Concepts</h3>
             <div class="skill-pills">
               <span class="pill">ETL</span>
@@ -776,22 +762,22 @@
   </main>
 
   <!-- ═══════════ FOOTER ═══════════ -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container footer-inner">
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
 
-    <div class="footer-left">
-      <a href="#hero" class="footer-logo" aria-label="Back to top">
-        <span class="logo-mark">YH</span>
-        <span class="logo-dot" aria-hidden="true"></span>
-      </a>
+      <div class="footer-left">
+        <a href="#hero" class="footer-logo" aria-label="Back to top">
+          <span class="logo-mark">YH</span>
+          <span class="logo-dot" aria-hidden="true"></span>
+        </a>
 
-      <p class="footer-copy">
-        © <span id="footer-year"></span> Yassa Hammam. All rights reserved.
-      </p>
+        <p class="footer-copy">
+          © <span id="footer-year"></span> Yassa Hammam. All rights reserved.
+        </p>
+      </div>
+
     </div>
-
-  </div>
-</footer>
+  </footer>
 
   <!-- Back to top -->
   <button class="back-top" id="back-top" aria-label="Back to top" hidden>
