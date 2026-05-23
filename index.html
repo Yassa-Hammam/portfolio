@@ -39,7 +39,7 @@
     <nav class="nav container">
 
       <!-- LEFT: Logo -->
-      <a href="#" class="nav-logo" aria-label="Home">
+      <a href="#" class="nav-logo footer-logo" aria-label="Home">
         <span class="logo-mark">YH</span>
         <span class="logo-dot"></span>
       </a>
@@ -52,6 +52,7 @@
         <li><a href="#experience" class="nav-link" data-nav>Experience</a></li>
         <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
         <li><a href="#education" class="nav-link" data-nav>Education</a></li>
+        <li><a href="#certifications" class="nav-link" data-nav>Certificates</a></li>
         <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
 
       </ul>
@@ -148,23 +149,6 @@
             </div>
             <div class="avatar-glow"></div>
           </div>
-
-          <div class="floating-card fc-1">
-            <span class="fc-icon">📊</span>
-            <span>Power BI</span>
-          </div>
-          <div class="floating-card fc-2">
-            <span class="fc-icon">🐍</span>
-            <span>Python</span>
-          </div>
-          <div class="floating-card fc-3">
-            <span class="fc-icon">🗄️</span>
-            <span>SQL</span>
-          </div>
-          <div class="floating-card fc-4">
-            <span class="fc-icon">🤖</span>
-            <span>AI / ML</span>
-          </div>
         </div>
       </div>
 
@@ -187,23 +171,20 @@
 
         <div class="about-text reveal">
           <p>I'm a <strong>Computer Science &amp; Artificial Intelligence</strong> student at Helwan University with a
-            strong foundation in programming, data structures, databases, and analytics.</p>
-          <p>Experienced with industry-standard tools including <mark>Power BI, SQL, Excel,</mark> and
-            <mark>Tableau</mark>. My work spans end-to-end data workflows — from raw collection to actionable visual
-            insights.
-          </p>
-          <p>Deeply passionate about <strong> Data Engineering, ETL Pipelines, Cloud Data Systems,</strong> and
-            <strong>AI-driven analytics</strong>. Currently seeking internship opportunities to convert academic
-            foundations into real-world impact.
-          </p>
+            strong foundation in programming, data structures, databases, and data analytics.</p>
+          <p>Skilled in tools such as <mark>Power BI, SQL Server, Excel,</mark> and <mark>Tableau</mark>, with hands-on
+            experience in data visualization, reporting, and analytical problem solving.</p>
+          <p>Interested in <strong>Data Engineering, ETL Processes, Machine Learning,</strong> and <strong>AI
+              applications</strong>, with a continuous focus on improving technical and analytical skills.</p>
+          <p>Currently seeking internship opportunities to gain real-world experience and contribute to impactful
+            projects.</p>
 
           <div class="about-tags">
+            <span class="tag">ETL Processes</span>
             <span class="tag">Data Engineering</span>
-            <span class="tag">ETL Pipelines</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Cloud Systems</span>
-            <span class="tag">AI Analytics</span>
+            <span class="tag">Data Visualization</span>
             <span class="tag">Problem Solving</span>
+
           </div>
         </div>
       </div>
@@ -342,23 +323,22 @@
         </div>
 
         <div class="tab-group reveal" role="tablist" aria-label="Project categories">
-          <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-web" id="btn-web"
-            data-tab="web">
-            🌐 Web Development
-          </button>
-          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-data" id="btn-data" data-tab="data">
+          <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-data" id="btn-data"
+            data-tab="data">
             📊 Data Analytics
+          </button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-web" id="btn-web" data-tab="web">
+            🌐 Web Development
           </button>
         </div>
 
         <!-- Web Projects -->
-        <div class="projects-panel active" id="tab-web" role="tabpanel" aria-labelledby="btn-web">
+        <div class="projects-panel" id="tab-web" role="tabpanel" aria-labelledby="btn-web" hidden>
           <div class="projects-grid">
 
             <article class="proj-card reveal" aria-label="Restaurant Website project">
               <div class="proj-card-inner">
                 <header class="proj-header">
-                  <span class="proj-num">01</span>
                   <span class="proj-badge badge-web">Web Dev</span>
                 </header>
                 <h3 class="proj-title">🍽️ Restaurant Website</h3>
@@ -384,7 +364,6 @@
             <article class="proj-card reveal delay-2" aria-label="Tourism Website project">
               <div class="proj-card-inner">
                 <header class="proj-header">
-                  <span class="proj-num">02</span>
                   <span class="proj-badge badge-web">Web Dev</span>
                 </header>
                 <h3 class="proj-title">✈️ Tourism Website</h3>
@@ -409,16 +388,20 @@
             </article>
 
           </div>
+          <div class="projects-more-container">
+            <button class="btn btn-outline show-more-btn" data-panel="tab-web">
+              <span>Show More</span> <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
         </div>
 
         <!-- Data Projects -->
-        <div class="projects-panel" id="tab-data" role="tabpanel" aria-labelledby="btn-data" hidden>
+        <div class="projects-panel active" id="tab-data" role="tabpanel" aria-labelledby="btn-data">
           <div class="projects-grid">
 
             <article class="proj-card reveal" aria-label="Spotify Data Analysis project">
               <div class="proj-card-inner">
                 <header class="proj-header">
-                  <span class="proj-num">03</span>
                   <span class="proj-badge badge-data">Data Analytics</span>
                 </header>
                 <h3 class="proj-title">🎵 Spotify Data Analysis</h3>
@@ -438,13 +421,19 @@
                 <div class="proj-outcome">
                   <strong>Outcome:</strong> Clear insights into music consumption patterns via interactive dashboards.
                 </div>
+                <div class="proj-links">
+                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-spotifydashboard-nti-activity-7352387256441036800--GL7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                    target="_blank" rel="noopener noreferrer" class="proj-link-btn"
+                    aria-label="View Spotify Data Analysis on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+                  </a>
+                </div>
               </div>
             </article>
 
             <article class="proj-card reveal delay-1" aria-label="Amazon Sales Analysis project">
               <div class="proj-card-inner">
                 <header class="proj-header">
-                  <span class="proj-num">04</span>
                   <span class="proj-badge badge-data">Data Analytics</span>
                 </header>
                 <h3 class="proj-title">🛒 Amazon Sales Analysis</h3>
@@ -464,13 +453,19 @@
                 <div class="proj-outcome">
                   <strong>Outcome:</strong> Identified key business opportunities from sales data patterns.
                 </div>
+                <div class="proj-links">
+                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-dashboarddesign-activity-7351594579667636224-iVMX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                    target="_blank" rel="noopener noreferrer" class="proj-link-btn"
+                    aria-label="View Amazon Sales Analysis on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+                  </a>
+                </div>
               </div>
             </article>
 
             <article class="proj-card reveal delay-2" aria-label="Electric Vehicles Dashboard project">
               <div class="proj-card-inner">
                 <header class="proj-header">
-                  <span class="proj-num">05</span>
                   <span class="proj-badge badge-data">Data Analytics</span>
                 </header>
                 <h3 class="proj-title">⚡ Electric Vehicles Dashboard</h3>
@@ -491,23 +486,102 @@
                 <div class="proj-outcome">
                   <strong>Outcome:</strong> Comprehensive EV industry landscape with actionable market insights.
                 </div>
+                <div class="proj-links">
+                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-electricvehicles-activity-7353868217234198532-Ri2U?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                    target="_blank" rel="noopener noreferrer" class="proj-link-btn"
+                    aria-label="View Electric Vehicles Dashboard on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+                  </a>
+                </div>
               </div>
             </article>
 
+            <article class="proj-card reveal delay-3" aria-label="Fitbit Marketing Dashboard project">
+              <div class="proj-card-inner">
+                <header class="proj-header">
+                  <span class="proj-badge badge-data">Data Analytics</span>
+                </header>
+                <h3 class="proj-title">📱 Fitbit Marketing Dashboard</h3>
+                <p class="proj-desc">Interactive Power BI dashboard analyzing Fitbit's marketing campaign performance
+                  across age groups, platforms, and regions — built as part of the NTI Summer Internship program.</p>
+                <div class="proj-stack">
+                  <span class="pill pill-sm">Power BI</span>
+                  <span class="pill pill-sm">DAX</span>
+                  <span class="pill pill-sm">Data Visualization</span>
+                </div>
+                <ul class="proj-features" role="list">
+                  <li>48K impressions · 10% CTR · 4,830 clicks tracked</li>
+                  <li>Clicks breakdown by age group &amp; platform</li>
+                  <li>Top-performing months &amp; regional conversions</li>
+                  <li>Dynamic navigation via Action Buttons &amp; Tooltips</li>
+                </ul>
+                <div class="proj-outcome">
+                  <strong>Outcome:</strong> Identified top campaigns driving 1,496 conversions and $411K conversion
+                  value across regions.
+                </div>
+                <div class="proj-links">
+                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-dashboarddesign-activity-7351069159125897216-djnq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                    target="_blank" rel="noopener noreferrer" class="proj-link-btn"
+                    aria-label="View Fitbit Marketing Dashboard on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal delay-4" aria-label="E-commerce Sales Dashboard project">
+              <div class="proj-card-inner">
+                <header class="proj-header">
+                  <span class="proj-badge badge-data">Data Analytics</span>
+                </header>
+                <h3 class="proj-title">🛍️ E-commerce Sales Analysis</h3>
+                <p class="proj-desc">Interactive Power BI dashboard analyzing sales and operations from Brazil's Olist
+                  e-commerce dataset — covering 96K+ customers, payment methods, and regional performance.</p>
+                <div class="proj-stack">
+                  <span class="pill pill-sm">Power BI</span>
+                  <span class="pill pill-sm">Power Query</span>
+                  <span class="pill pill-sm">DAX</span>
+                  <span class="pill pill-sm">Data Modeling</span>
+                </div>
+                <ul class="proj-features" role="list">
+                  <li>13.59M BRL net sales · 96K+ customers tracked</li>
+                  <li>Category, state &amp; payment method breakdowns</li>
+                  <li>Custom tooltips &amp; slicers for interactivity</li>
+                  <li>Avg 12.5-day delivery time analysis by region</li>
+                </ul>
+                <div class="proj-outcome">
+                  <strong>Outcome:</strong> Uncovered top-selling categories and regional sales leaders powering
+                  data-driven business decisions.
+                </div>
+                <div class="proj-links">
+                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-dashboarddesign-activity-7358503456132796416-y1F2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                    target="_blank" rel="noopener noreferrer" class="proj-link-btn"
+                    aria-label="View E-commerce Sales Analysis on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+          <div class="projects-more-container">
+            <button class="btn btn-outline show-more-btn" data-panel="tab-data">
+              <span>Show More</span> <i class="fa-solid fa-chevron-down"></i>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ═══════════ EDUCATION ═══════════ -->
-    <section id="education" class="section education-section" aria-label="Education and certifications">
+    <section id="education" class="section education-section" aria-label="Academic background">
       <div class="container">
-        <div class="section-header reveal">
-          <p class="section-eyebrow">Academic Background</p>
-          <h2 class="section-title">Education &amp; <em class="serif-italic accent-text">Certifications</em></h2>
+        <div class="section-header reveal" style="text-align:center">
+          <p class="section-eyebrow" style="justify-content:center">Academic Background</p>
+          <h2 class="section-title">Education &amp; <em class="serif-italic accent-text">Academic Journey</em></h2>
         </div>
 
-        <div class="edu-grid">
+        <div class="edu-single">
           <article class="edu-card reveal" aria-label="Helwan University degree">
             <div class="edu-card-top">
               <div class="edu-icon" aria-hidden="true">🎓</div>
@@ -524,26 +598,88 @@
               <span class="edu-badge">Bachelor's Degree</span>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <div class="certs-column reveal delay-2">
-            <h3 class="certs-title">Certifications</h3>
-            <article class="cert-card" aria-label="NTI Data Analytics certification">
-              <div class="cert-icon" aria-hidden="true">📈</div>
-              <div class="cert-info">
-                <h4 class="cert-name">Data Analytics Certification</h4>
-                <p class="cert-issuer">National Telecommunication Institute · NTI</p>
+    <!-- ═══════════ CERTIFICATIONS ═══════════ -->
+    <section id="certifications" class="section certifications-section" aria-label="Certifications and credentials">
+      <div class="container">
+        <div class="section-header reveal" style="text-align:center">
+          <p class="section-eyebrow" style="justify-content:center">Credentials</p>
+          <h2 class="section-title">Professional &amp; <em class="serif-italic accent-text">Certifications</em></h2>
+        </div>
+
+        <div class="certs-grid">
+          <article class="cert-card reveal" aria-label="NTI Data Analytics certification">
+            <header class="cert-header">
+              <div class="cert-header-left">
+                <div class="cert-icon" aria-hidden="true">📈</div>
+                <div class="cert-meta">
+                  <h4 class="cert-name">Data Analytics Certification</h4>
+                  <p class="cert-issuer">National Telecommunication Institute · NTI</p>
+                </div>
               </div>
-              <div class="cert-check" aria-label="Verified" aria-hidden="true">✓</div>
-            </article>
-            <article class="cert-card" aria-label="NVIDIA Deep Learning certification">
-              <div class="cert-icon" aria-hidden="true">🧠</div>
-              <div class="cert-info">
-                <h4 class="cert-name">Getting Started with Deep Learning</h4>
-                <p class="cert-issuer">NVIDIA · Deep Learning Institute</p>
+              <div class="cert-date">2024</div>
+            </header>
+
+            <p class="cert-desc">
+              Rigorous data analytics training covering SQL database querying, database design, advanced Excel
+              spreadsheet reporting, and custom interactive dashboard engineering using Power BI.
+            </p>
+
+            <div class="cert-footer">
+              <div class="cert-tags">
+                <span class="pill pill-sm">SQL</span>
+                <span class="pill pill-sm">Power BI</span>
+                <span class="pill pill-sm">Excel</span>
+                <span class="pill pill-sm">Data Analysis</span>
               </div>
-              <div class="cert-check" aria-label="Verified" aria-hidden="true">✓</div>
-            </article>
-          </div>
+              <div class="cert-actions">
+                <div class="cert-check" aria-label="Verified" aria-hidden="true">✓</div>
+                <a href="https://www.linkedin.com/posts/yassa-hammam_nti-certification-ugcPost-7357365263287136256-9KsI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                  target="_blank" rel="noopener noreferrer" class="cert-link-btn"
+                  aria-label="View NTI Data Analytics Certification on LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="cert-card reveal delay-1" aria-label="NVIDIA Deep Learning certification">
+            <header class="cert-header">
+              <div class="cert-header-left">
+                <div class="cert-icon" aria-hidden="true">🧠</div>
+                <div class="cert-meta">
+                  <h4 class="cert-name">Getting Started with Deep Learning</h4>
+                  <p class="cert-issuer">NVIDIA · Deep Learning Institute</p>
+                </div>
+              </div>
+              <div class="cert-date">2024</div>
+            </header>
+
+            <p class="cert-desc">
+              Practical machine learning training focused on building deep neural network architectures from scratch,
+              utilizing PyTorch, computer vision applications, and model deployment pipelines.
+            </p>
+
+            <div class="cert-footer">
+              <div class="cert-tags">
+                <span class="pill pill-sm">PyTorch</span>
+                <span class="pill pill-sm">Deep Learning</span>
+                <span class="pill pill-sm">Computer Vision</span>
+                <span class="pill pill-sm">Neural Networks</span>
+              </div>
+              <div class="cert-actions">
+                <div class="cert-check" aria-label="Verified" aria-hidden="true">✓</div>
+                <a href="https://www.linkedin.com/posts/yassa-hammam_certificate-ugcPost-7367760517064491011-K2Sv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                  target="_blank" rel="noopener noreferrer" class="cert-link-btn"
+                  aria-label="View NVIDIA Deep Learning Certification on LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -559,36 +695,36 @@
         <div class="why-grid">
           <div class="traits-grid reveal">
             <div class="trait-card">
-              <span class="trait-icon" aria-hidden="true">🧩</span>
+              <span class="trait-icon">🧠</span>
+              <span class="trait-name">Algorithmic Thinking</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon">📊</span>
+              <span class="trait-name">Data Analysis</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon">🗄️</span>
+              <span class="trait-name">Data Modeling</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon">💻</span>
+              <span class="trait-name">Clean Coding</span>
+            </div>
+            <div class="trait-card">
+              <span class="trait-icon">🧩</span>
               <span class="trait-name">Problem Solving</span>
             </div>
             <div class="trait-card">
-              <span class="trait-icon" aria-hidden="true">📐</span>
-              <span class="trait-name">Analytical Thinking</span>
+              <span class="trait-icon">🤖</span>
+              <span class="trait-name">AI &amp; Deep Learning</span>
             </div>
             <div class="trait-card">
-              <span class="trait-icon" aria-hidden="true">⚡</span>
-              <span class="trait-name">Fast Learner</span>
+              <span class="trait-icon">🏗️</span>
+              <span class="trait-name">ETL &amp; Data Pipelines</span>
             </div>
             <div class="trait-card">
-              <span class="trait-icon" aria-hidden="true">🤝</span>
-              <span class="trait-name">Team Player</span>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon" aria-hidden="true">🤖</span>
-              <span class="trait-name">Passion for AI</span>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon" aria-hidden="true">🔄</span>
-              <span class="trait-name">Adaptability</span>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon" aria-hidden="true">🌱</span>
-              <span class="trait-name">Growth Mindset</span>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon" aria-hidden="true">🎯</span>
-              <span class="trait-name">Goal-Oriented</span>
+              <span class="trait-icon">🔄</span>
+              <span class="trait-name">Continuous Improvement</span>
             </div>
           </div>
 

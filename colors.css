@@ -1,0 +1,56 @@
+/* -------------------------------------------------
+   Premium AI‑Tech Color System
+   ------------------------------------------------- */
+:root {
+  /* Brand Colors */
+  --color-primary:   #0A9ABD;   /* refined cyan‑blue */
+  --color-secondary: #7A5C9E;   /* soft violet (gradient only) */
+
+  /* Backgrounds */
+  --bg-dark:          #0B1120;   /* deep navy */
+  --bg-light:         #F5F9FC;   /* cool white with blue tint */
+
+  /* Surfaces / Cards */
+  --surface-dark: rgba(255,255,255,0.04);  /* subtle glass on dark */
+  --surface-light: #FFFFFF;               /* plain white */
+
+  /* Text */
+  --text-primary-dark:  #E6F0F9;   /* high‑contrast on dark */
+  --text-primary-light: #1F2A38;   /* main copy on light */
+  --text-secondary:    #7F8FA4;   /* sub‑headings */
+
+  /* Semantic (muted) */
+  --color-success: #6ED59A;   /* muted success */
+  --color-warning: #D4B562;   /* muted warning */
+  --color-error:   #E7747C;   /* muted error */
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --gradient-secondary: linear-gradient(225deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+
+  /* Misc */
+  --border-radius: 0.5rem;
+  --transition-speed: 0.25s;
+}
+
+/* Dark theme overrides (default) */
+[data-theme="dark"] {
+  --bg-primary: var(--bg-dark);
+  --bg-surface: var(--surface-dark);
+  --text-primary: var(--text-primary-dark);
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --bg-primary: var(--bg-light);
+  --bg-surface: var(--surface-light);
+  --text-primary: var(--text-primary-light);
+}
+
+/* Example usage */
+body { background: var(--bg-primary); color: var(--text-primary); }
+.card { background: var(--bg-surface); border-radius: var(--border-radius); }
+.btn-primary { background: var(--gradient-primary); color: #fff; border: none; }
+.badge-success { background: var(--color-success); color: #fff; }
+.badge-warning { background: var(--color-warning); color: #fff; }
+.badge-error   { background: var(--color-error);   color: #fff; }

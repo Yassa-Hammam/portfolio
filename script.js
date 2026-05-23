@@ -421,6 +421,53 @@ function initSmoothScroll() {
 }
 
 /* ════════════════════════════════════════════
+   SHOW MORE PROJECTS (Mobile Only)
+   ════════════════════════════════════════════ */
+function initShowMoreProjects() {
+  const panels = $$('.projects-panel');
+  panels.forEach(panel => {
+    const cards = $$('.proj-card', panel);
+    const moreContainer = $('.projects-more-container', panel);
+    if (!moreContainer) return;
+
+    if (cards.length <= 2) {
+      moreContainer.style.display = 'none';
+      return;
+    }
+
+    const button = $('button', moreContainer);
+    if (!button) return;
+    const btnText = $('span', button);
+    const icon = $('i', button);
+
+    button.addEventListener('click', () => {
+      const isExpanded = panel.classList.toggle('expanded');
+      if (isExpanded) {
+        if (btnText) btnText.textContent = 'Show Less';
+        if (icon) icon.className = 'fa-solid fa-chevron-up';
+        
+        // Trigger reveal animations on newly visible cards
+        $$('.reveal', panel).forEach(el => {
+          if (!el.classList.contains('visible')) {
+            setTimeout(() => el.classList.add('visible'), 50);
+          }
+        });
+      } else {
+        if (btnText) btnText.textContent = 'Show More';
+        if (icon) icon.className = 'fa-solid fa-chevron-down';
+        
+        const projectsSection = $('#projects');
+        if (projectsSection) {
+          const offset = 76;
+          const top = projectsSection.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+}
+
+/* ════════════════════════════════════════════
    INIT ALL
    ════════════════════════════════════════════ */
 function init() {
@@ -432,6 +479,7 @@ function init() {
   initScrollReveal();
   initCounters();
   initTabs();
+  initShowMoreProjects();
   initContactForm();
   initCVButton();
   initFooterYear();
