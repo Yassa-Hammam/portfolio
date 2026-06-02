@@ -104,12 +104,6 @@
             <span class="name-last serif-italic">Hammam</span>
           </h1>
 
-          <div class="hero-typewriter reveal delay-2" aria-live="polite">
-            <span class="type-prefix">I'm a</span>
-            <span class="type-text" id="type-text"
-              data-phrases='["Data Engineer", "Data Analyst", "Power BI Developer", "AI Enthusiast", "Python Developer", "ETL Engineer"]'></span>
-          </div>
-
           <p class="hero-tagline reveal delay-3">
             Transforming raw data into strategic insights —<br class="br-desktop" />
             Engineering pipelines, dashboards, and intelligent systems.
@@ -125,6 +119,18 @@
                 <rect x="3" y="14" width="7" height="7" rx="1" />
               </svg>
               View Projects
+            </a>
+            <a href="https://drive.google.com/file/d/12yXEzWz1nHPKMfJDJU7nVJs9RhCD0__B/view?usp=sharing"
+              class="btn btn-outline" target="_blank" rel="noopener noreferrer" id="hero-cv-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+              View CV
             </a>
             <a href="#contact" class="btn btn-outline">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -145,7 +151,7 @@
             <div class="avatar-inner">
               <img src="profile.png" alt="Yassa Hammam" class="avatar-photo" loading="eager"
                 onerror="this.style.display='none';document.querySelector('.avatar-initials').style.display='flex'" />
-
+              <div class="avatar-initials" style="display: none;">YH</div>
             </div>
             <div class="avatar-glow"></div>
           </div>
@@ -170,7 +176,7 @@
         </div>
 
         <div class="about-text reveal">
-          <p>I'm a <strong>Computer Science &amp; Artificial Intelligence</strong> student at Helwan University with a
+          <p>I'm a <strong>Computer Science &amp; Artificial Intelligence</strong> student at Capital University with a
             strong foundation in programming, data structures, databases, and data analytics.</p>
           <p>Skilled in tools such as <mark>Power BI, SQL Server, Excel,</mark> and <mark>Tableau</mark>, with hands-on
             experience in data visualization, reporting, and analytical problem solving.</p>
@@ -231,7 +237,7 @@
           </article>
 
           <article class="skill-card reveal delay-3">
-            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-column"></i></div>
             <h3 class="skill-card-title">Data &amp; Analytics</h3>
             <div class="skill-pills">
               <span class="pill">Power BI</span>
@@ -242,7 +248,7 @@
           </article>
 
           <article class="skill-card reveal delay-4">
-            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-gears"></i></div>
             <h3 class="skill-card-title">Core Concepts</h3>
             <div class="skill-pills">
               <span class="pill">ETL</span>
@@ -276,7 +282,7 @@
             </div>
             <div class="exp-content">
               <div class="exp-header">
-                <div class="exp-logo" aria-hidden="true">📡</div>
+                <div class="exp-logo" aria-hidden="true"><i class="fa-solid fa-satellite-dish"></i></div>
                 <div class="exp-meta">
                   <h3 class="exp-role">Data Analysis Trainee</h3>
                   <p class="exp-company">National Telecommunication Institute (NTI)</p>
@@ -325,10 +331,10 @@
         <div class="tab-group reveal" role="tablist" aria-label="Project categories">
           <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-data" id="btn-data"
             data-tab="data">
-            📊 Data Analytics
+            <i class="fa-solid fa-chart-column" style="margin-right: 6px;"></i> Data Analytics
           </button>
           <button class="tab" role="tab" aria-selected="false" aria-controls="tab-web" id="btn-web" data-tab="web">
-            🌐 Web Development
+            <i class="fa-solid fa-globe" style="margin-right: 6px;"></i> Web Development
           </button>
         </div>
 
@@ -341,7 +347,8 @@
                 <header class="proj-header">
                   <span class="proj-badge badge-web">Web Dev</span>
                 </header>
-                <h3 class="proj-title">🍽️ Restaurant Website</h3>
+                <h3 class="proj-title"><i class="fa-solid fa-utensils"
+                    style="color: var(--cyan); margin-right: 6px;"></i> Restaurant Website</h3>
                 <p class="proj-desc">A modern digital presence for small restaurants — featuring menu showcasing, smooth
                   UX, and a mobile-first layout to improve customer engagement across all devices.</p>
                 <div class="proj-stack">
@@ -366,7 +373,8 @@
                 <header class="proj-header">
                   <span class="proj-badge badge-web">Web Dev</span>
                 </header>
-                <h3 class="proj-title">✈️ Tourism Website</h3>
+                <h3 class="proj-title"><i class="fa-solid fa-plane" style="color: var(--cyan); margin-right: 6px;"></i>
+                  Tourism Website</h3>
                 <p class="proj-desc">An immersive digital platform for tourism destinations — showcasing places,
                   attractions, and encouraging visitor exploration through visual storytelling and interactive elements.
                 </p>
@@ -404,7 +412,8 @@
                 <header class="proj-header">
                   <span class="proj-badge badge-data">Data Analytics</span>
                 </header>
-                <h3 class="proj-title">🎵 Spotify Data Analysis</h3>
+                <h3 class="proj-title"><i class="fa-solid fa-music"
+                    style="color: var(--violet); margin-right: 6px;"></i> Spotify Data Analysis</h3>
                 <p class="proj-desc">Deep-dive analysis of music streaming trends and user behavior patterns from a
                   large Spotify dataset to uncover actionable business insights and consumption patterns.</p>
                 <div class="proj-stack">
@@ -436,7 +445,8 @@
                 <header class="proj-header">
                   <span class="proj-badge badge-data">Data Analytics</span>
                 </header>
-                <h3 class="proj-title">🛒 Amazon Sales Analysis</h3>
+                <h3 class="proj-title"><i class="fa-solid fa-cart-shopping"
+                    style="color: var(--violet); margin-right: 6px;"></i> Amazon Sales Analysis</h3>
                 <p class="proj-desc">Comprehensive analysis of product sales performance and customer behavior to
                   identify business opportunities, top-performing categories, and revenue growth drivers.</p>
                 <div class="proj-stack">
@@ -468,7 +478,8 @@
                 <header class="proj-header">
                   <span class="proj-badge badge-data">Data Analytics</span>
                 </header>
-                <h3 class="proj-title">⚡ Electric Vehicles Dashboard</h3>
+                <h3 class="proj-title"><i class="fa-solid fa-bolt" style="color: var(--violet); margin-right: 6px;"></i>
+                  Electric Vehicles Dashboard</h3>
                 <p class="proj-desc">Comprehensive EV market landscape analysis covering 264 models, 35+ brands, range
                   metrics, and adoption trends — delivered across Power BI and Tableau dashboards.</p>
                 <div class="proj-stack">
@@ -501,7 +512,8 @@
                 <header class="proj-header">
                   <span class="proj-badge badge-data">Data Analytics</span>
                 </header>
-                <h3 class="proj-title">📱 Fitbit Marketing Dashboard</h3>
+                <h3 class="proj-title"><i class="fa-solid fa-mobile-screen-button"
+                    style="color: var(--violet); margin-right: 6px;"></i> Fitbit Marketing Dashboard</h3>
                 <p class="proj-desc">Interactive Power BI dashboard analyzing Fitbit's marketing campaign performance
                   across age groups, platforms, and regions — built as part of the NTI Summer Internship program.</p>
                 <div class="proj-stack">
@@ -534,7 +546,8 @@
                 <header class="proj-header">
                   <span class="proj-badge badge-data">Data Analytics</span>
                 </header>
-                <h3 class="proj-title">🛍️ E-commerce Sales Analysis</h3>
+                <h3 class="proj-title"><i class="fa-solid fa-bag-shopping"
+                    style="color: var(--violet); margin-right: 6px;"></i> E-commerce Sales Analysis</h3>
                 <p class="proj-desc">Interactive Power BI dashboard analyzing sales and operations from Brazil's Olist
                   e-commerce dataset — covering 96K+ customers, payment methods, and regional performance.</p>
                 <div class="proj-stack">
@@ -582,12 +595,12 @@
         </div>
 
         <div class="edu-single">
-          <article class="edu-card reveal" aria-label="Helwan University degree">
+          <article class="edu-card reveal" aria-label="Capital University degree">
             <div class="edu-card-top">
-              <div class="edu-icon" aria-hidden="true">🎓</div>
+              <div class="edu-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></div>
               <div class="edu-info">
                 <h3 class="edu-degree">Computer Science &amp; Artificial Intelligence</h3>
-                <p class="edu-uni">Helwan University</p>
+                <p class="edu-uni">Capital University</p>
               </div>
             </div>
             <p class="edu-desc">Pursuing a Bachelor's degree with focus on algorithms, machine learning, data systems,
@@ -614,7 +627,7 @@
           <article class="cert-card reveal" aria-label="NTI Data Analytics certification">
             <header class="cert-header">
               <div class="cert-header-left">
-                <div class="cert-icon" aria-hidden="true">📈</div>
+                <div class="cert-icon" aria-hidden="true"><i class="fa-solid fa-award"></i></div>
                 <div class="cert-meta">
                   <h4 class="cert-name">Data Analytics Certification</h4>
                   <p class="cert-issuer">National Telecommunication Institute · NTI</p>
@@ -649,7 +662,7 @@
           <article class="cert-card reveal delay-1" aria-label="NVIDIA Deep Learning certification">
             <header class="cert-header">
               <div class="cert-header-left">
-                <div class="cert-icon" aria-hidden="true">🧠</div>
+                <div class="cert-icon" aria-hidden="true"><i class="fa-solid fa-brain"></i></div>
                 <div class="cert-meta">
                   <h4 class="cert-name">Getting Started with Deep Learning</h4>
                   <p class="cert-issuer">NVIDIA · Deep Learning Institute</p>
@@ -684,73 +697,50 @@
       </div>
     </section>
 
-    <!-- ═══════════ WHY HIRE ME ═══════════ -->
-    <section id="why" class="section why-section" aria-label="Why hire me">
+    <!-- ═══════════ WHY ME ═══════════ -->
+    <section id="why" class="section why-section" aria-label="Why me">
       <div class="container">
         <div class="section-header reveal">
           <p class="section-eyebrow">Value Proposition</p>
-          <h2 class="section-title">Why <em class="serif-italic accent-text">Hire Me?</em></h2>
+          <h2 class="section-title">Why <em class="serif-italic accent-text">Me</em></h2>
         </div>
 
         <div class="why-grid">
           <div class="traits-grid reveal">
             <div class="trait-card">
-              <span class="trait-icon">🧠</span>
+              <span class="trait-icon"><i class="fa-solid fa-diagram-project"></i></span>
               <span class="trait-name">Algorithmic Thinking</span>
             </div>
             <div class="trait-card">
-              <span class="trait-icon">📊</span>
+              <span class="trait-icon"><i class="fa-solid fa-chart-line"></i></span>
               <span class="trait-name">Data Analysis</span>
             </div>
             <div class="trait-card">
-              <span class="trait-icon">🗄️</span>
+              <span class="trait-icon"><i class="fa-solid fa-database"></i></span>
               <span class="trait-name">Data Modeling</span>
             </div>
             <div class="trait-card">
-              <span class="trait-icon">💻</span>
+              <span class="trait-icon"><i class="fa-solid fa-laptop-code"></i></span>
               <span class="trait-name">Clean Coding</span>
             </div>
             <div class="trait-card">
-              <span class="trait-icon">🧩</span>
+              <span class="trait-icon"><i class="fa-solid fa-puzzle-piece"></i></span>
               <span class="trait-name">Problem Solving</span>
             </div>
             <div class="trait-card">
-              <span class="trait-icon">🤖</span>
+              <span class="trait-icon"><i class="fa-solid fa-robot"></i></span>
               <span class="trait-name">AI &amp; Deep Learning</span>
             </div>
             <div class="trait-card">
-              <span class="trait-icon">🏗️</span>
+              <span class="trait-icon"><i class="fa-solid fa-filter"></i></span>
               <span class="trait-name">ETL &amp; Data Pipelines</span>
             </div>
             <div class="trait-card">
-              <span class="trait-icon">🔄</span>
+              <span class="trait-icon"><i class="fa-solid fa-arrows-rotate"></i></span>
               <span class="trait-name">Continuous Improvement</span>
             </div>
           </div>
 
-          <div class="why-achievements reveal delay-2">
-            <div class="achieve-card">
-              <div class="achieve-num counter" data-count="10">0</div>
-              <div class="achieve-details">
-                <strong>Projects Built</strong>
-                <p>From web apps to data analytics dashboards</p>
-              </div>
-            </div>
-            <div class="achieve-card">
-              <div class="achieve-num">3.15</div>
-              <div class="achieve-details">
-                <strong>GPA Score</strong>
-                <p>Strong academic performance in CS &amp; AI</p>
-              </div>
-            </div>
-            <div class="achieve-card">
-              <div class="achieve-num counter" data-count="2">0</div>
-              <div class="achieve-details">
-                <strong>Certifications</strong>
-                <p>NTI Data Analytics + NVIDIA Deep Learning</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -839,58 +829,6 @@
 
           </div>
 
-          <div class="contact-form-wrap reveal delay-2">
-            <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
-
-              <!-- Name -->
-              <div class="form-group">
-                <label for="cf-name" class="form-label">Your Name</label>
-                <input type="text" id="cf-name" name="name" class="form-control" placeholder="John Doe" required
-                  autocomplete="name" aria-describedby="name-error" />
-                <span class="form-error" id="name-error" aria-live="polite"></span>
-              </div>
-
-              <!-- Email -->
-              <div class="form-group">
-                <label for="cf-email" class="form-label">Email Address</label>
-                <input type="email" id="cf-email" name="email" class="form-control" placeholder="john@company.com"
-                  required autocomplete="email" aria-describedby="email-error" />
-                <span class="form-error" id="email-error" aria-live="polite"></span>
-              </div>
-
-              <!-- Subject -->
-              <div class="form-group">
-                <label for="cf-subject" class="form-label">Subject</label>
-                <input type="text" id="cf-subject" name="subject" class="form-control"
-                  placeholder="Internship Opportunity" autocomplete="off" />
-              </div>
-
-              <!-- Message -->
-              <div class="form-group">
-                <label for="cf-msg" class="form-label">Message</label>
-                <textarea id="cf-msg" name="message" class="form-control"
-                  placeholder="Tell me about your opportunity or project..." required rows="5"
-                  aria-describedby="message-error"></textarea>
-                <span class="form-error" id="message-error" aria-live="polite"></span>
-              </div>
-
-              <!-- Submit -->
-              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="22" y1="2" x2="11" y2="13" />
-                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                </svg>
-
-                <span id="btn-text">Send Message</span>
-              </button>
-
-              <!-- Success -->
-              <div class="form-success" id="form-success" role="alert" hidden>
-                ✅ Message sent! I'll get back to you shortly.
-              </div>
-
-            </form>
-          </div>
         </div>
       </div>
     </section>

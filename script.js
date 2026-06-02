@@ -137,62 +137,6 @@ function initBackToTop() {
 }
 
 /* ════════════════════════════════════════════
-   TYPEWRITER EFFECT
-   ════════════════════════════════════════════ */
-function initTypewriter() {
-  const el = $('#type-text');
-  if (!el) return;
-
-  const rawPhrases = el.getAttribute('data-phrases');
-  let phrases = [
-    'Data Engineer',
-    'Data Analyst',
-    'Power BI Developer',
-    'AI Enthusiast',
-    'Python Developer',
-    'ETL Engineer',
-  ];
-  if (rawPhrases) {
-    try {
-      phrases = JSON.parse(rawPhrases);
-    } catch (e) {
-      console.error('Invalid JSON in data-phrases attribute', e);
-    }
-  }
-
-  let phraseIdx = 0;
-  let charIdx = 0;
-  let isDeleting = false;
-
-  function tick() {
-    const currentPhrase = phrases[phraseIdx];
-
-    if (isDeleting) {
-      charIdx--;
-    } else {
-      charIdx++;
-    }
-
-    el.textContent = currentPhrase.substring(0, charIdx);
-
-    let delay = isDeleting ? 50 : 95;
-
-    if (!isDeleting && charIdx === currentPhrase.length) {
-      delay = 1800;
-      isDeleting = true;
-    } else if (isDeleting && charIdx === 0) {
-      isDeleting = false;
-      phraseIdx = (phraseIdx + 1) % phrases.length;
-      delay = 350;
-    }
-
-    setTimeout(tick, delay);
-  }
-
-  setTimeout(tick, 800);
-}
-
-/* ════════════════════════════════════════════
    SCROLL REVEAL (Intersection Observer)
    ════════════════════════════════════════════ */
 function initScrollReveal() {
@@ -213,37 +157,7 @@ function initScrollReveal() {
   return observer;
 }
 
-/* ════════════════════════════════════════════
-   COUNTERS
-   ════════════════════════════════════════════ */
-function initCounters() {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
 
-        const el = entry.target;
-        const target = parseInt(el.dataset.count, 10);
-        if (isNaN(target)) return;
-
-        const duration = 1400;
-        const stepTime = Math.max(Math.floor(duration / target), 14);
-        let current = 0;
-
-        const timer = setInterval(() => {
-          current++;
-          el.textContent = current;
-          if (current >= target) clearInterval(timer);
-        }, stepTime);
-
-        observer.unobserve(el);
-      });
-    },
-    { threshold: 0.6 }
-  );
-
-  $$('[data-count]').forEach(el => observer.observe(el));
-}
 
 /* ════════════════════════════════════════════
    PROJECT TABS
@@ -285,90 +199,7 @@ function initTabs() {
   });
 }
 
-/* ════════════════════════════════════════════
-   CONTACT FORM
-   ════════════════════════════════════════════ */
-function initContactForm() {
-  const form = $('#contact-form');
-  const btnText = $('#btn-text');
-  const success = $('#form-success');
 
-  if (!form) return;
-
-  function validateEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  function setError(field, msg) {
-    field.classList.add('error');
-    const errEl = field.parentElement?.querySelector('.form-error');
-    if (errEl) errEl.textContent = msg;
-  }
-
-  function clearError(field) {
-    field.classList.remove('error');
-    const errEl = field.parentElement?.querySelector('.form-error');
-    if (errEl) errEl.textContent = '';
-  }
-
-  /* Live validation */
-  $$('.form-control', form).forEach(field => {
-    field.addEventListener('blur', () => {
-      if (field.required && !field.value.trim()) {
-        setError(field, 'This field is required.');
-      } else if (field.type === 'email' && field.value && !validateEmail(field.value)) {
-        setError(field, 'Please enter a valid email.');
-      } else {
-        clearError(field);
-      }
-    });
-
-    field.addEventListener('input', () => clearError(field));
-  });
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const nameField = $('#cf-name');
-    const emailField = $('#cf-email');
-    const msgField = $('#cf-msg');
-    let valid = true;
-
-    if (!nameField?.value.trim()) {
-      setError(nameField, 'Please enter your name.');
-      valid = false;
-    }
-
-    if (!emailField?.value.trim()) {
-      setError(emailField, 'Please enter your email.');
-      valid = false;
-    } else if (!validateEmail(emailField.value)) {
-      setError(emailField, 'Please enter a valid email address.');
-      valid = false;
-    }
-
-    if (!msgField?.value.trim()) {
-      setError(msgField, 'Please enter your message.');
-      valid = false;
-    }
-
-    if (!valid) return;
-
-    const btn = $('#submit-btn');
-    if (!btn || !btnText) return;
-
-    /* Simulate send (replace with real backend/FormSpree) */
-    btn.disabled = true;
-    btnText.textContent = 'Sending…';
-
-    setTimeout(() => {
-      btn.style.display = 'none';
-      success.removeAttribute('hidden');
-      success.style.display = 'block';
-      form.reset();
-    }, 1800);
-  });
-}
 
 /* ════════════════════════════════════════════
    CV DOWNLOAD HANDLER
@@ -445,7 +276,7 @@ function initShowMoreProjects() {
       if (isExpanded) {
         if (btnText) btnText.textContent = 'Show Less';
         if (icon) icon.className = 'fa-solid fa-chevron-up';
-        
+
         // Trigger reveal animations on newly visible cards
         $$('.reveal', panel).forEach(el => {
           if (!el.classList.contains('visible')) {
@@ -455,7 +286,7 @@ function initShowMoreProjects() {
       } else {
         if (btnText) btnText.textContent = 'Show More';
         if (icon) icon.className = 'fa-solid fa-chevron-down';
-        
+
         const projectsSection = $('#projects');
         if (projectsSection) {
           const offset = 76;
@@ -475,12 +306,9 @@ function init() {
   initNav();
   initScrollProgress();
   initBackToTop();
-  initTypewriter();
   initScrollReveal();
-  initCounters();
   initTabs();
   initShowMoreProjects();
-  initContactForm();
   initCVButton();
   initFooterYear();
   initSmoothScroll();
