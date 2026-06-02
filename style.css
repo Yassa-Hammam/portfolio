@@ -611,6 +611,16 @@ a {
   box-shadow: var(--glow-cyan);
 }
 
+.btn-ghost {
+  background: var(--amber-dim);
+  color: var(--amber);
+  border: 1.5px solid rgba(255, 179, 71, 0.28);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 179, 71, 0.22);
+  box-shadow: var(--glow-amber);
+}
 
 
 /* ════════════════════════════════════════════
@@ -888,6 +898,44 @@ a {
   margin-bottom: var(--sp-6);
 }
 
+.hero-metrics {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metric-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.85rem;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--cyan), var(--violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.metric-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+}
 
 /* Avatar / Hero Visual */
 .hero-visual {
@@ -2367,6 +2415,13 @@ a {
   }
 
 
+  .hero-metrics {
+    gap: var(--sp-3);
+  }
+
+  .metric-divider {
+    height: 28px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
