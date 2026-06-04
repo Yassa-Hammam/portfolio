@@ -85,6 +85,11 @@ html {
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.55);
+
+  /* Header / Navigation */
+  --header-bg: rgba(6, 11, 24, 0.92);
+  --header-border: rgba(0, 229, 255, 0.12);
+  --nav-menu-bg: rgba(6, 11, 24, 0.95);
 }
 
 /* ── Light Theme ── */
@@ -112,6 +117,11 @@ html {
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.10);
   --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+  /* Header / Navigation */
+  --header-bg: rgba(245, 247, 252, 0.92);
+  --header-border: rgba(0, 100, 160, 0.12);
+  --nav-menu-bg: rgba(245, 247, 252, 0.95);
 }
 
 /* ── Base Styles ── */
@@ -266,16 +276,17 @@ a {
   height: 68px;
   z-index: 1000;
 
-  background: rgba(6, 11, 24, 0.92);
+  background: var(--header-bg);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 229, 255, 0.12);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--header-border);
 
   transition: all 0.3s ease;
 }
 
 .site-header.scrolled {
-  background: rgba(6, 11, 24, 0.92);
-  border-bottom: 1px solid rgba(0, 229, 255, 0.12);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
 }
 
 .nav {
@@ -305,7 +316,7 @@ a {
 .logo-mark {
   font-weight: 800;
   font-size: 1.3rem;
-  background: linear-gradient(135deg, #00E5FF, #B08CFE);
+  background: linear-gradient(135deg, var(--cyan), var(--violet));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -320,9 +331,9 @@ a {
 .logo-dot {
   width: 6px;
   height: 6px;
-  background: #FFB347;
+  background: var(--amber);
   border-radius: 50%;
-  box-shadow: 0 0 10px #FFB347;
+  box-shadow: 0 0 10px var(--amber);
 }
 
 /* Nav Menu */
@@ -345,7 +356,7 @@ a {
     justify-content: center;
     align-items: center;
 
-    background: rgba(6, 11, 24, 0.95);
+    background: var(--nav-menu-bg);
     backdrop-filter: blur(25px);
 
     transform: translateX(100%);
@@ -368,20 +379,20 @@ a {
 
 .nav-link {
   font-size: 0.85rem;
-  color: #8A9BBE;
+  color: var(--text-2);
   padding: 6px 10px;
   border-radius: 8px;
   transition: 0.25s;
 }
 
 .nav-link:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  background: var(--surface);
 }
 
 .nav-link.active {
-  color: #00E5FF;
-  background: rgba(0, 229, 255, 0.08);
+  color: var(--cyan);
+  background: var(--cyan-dim);
 }
 
 .nav-actions {
@@ -392,16 +403,16 @@ a {
 
 .nav-cta {
   padding: 6px 14px;
-  border: 1px solid rgba(0, 229, 255, 0.3);
+  border: 1px solid var(--border-2);
   border-radius: 8px;
-  color: #00E5FF;
+  color: var(--cyan);
   font-size: 0.8rem;
   transition: 0.3s;
 }
 
 .nav-cta:hover {
-  background: rgba(0, 229, 255, 0.15);
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+  background: var(--cyan-dim);
+  box-shadow: var(--glow-cyan);
 }
 
 .theme-toggle {
@@ -455,7 +466,7 @@ a {
 .hamburger span {
   width: 22px;
   height: 2px;
-  background: #8A9BBE;
+  background: var(--text-2);
   transition: 0.3s;
 }
 
@@ -478,7 +489,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(6, 11, 24, 0.97);
+    background: var(--nav-menu-bg);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     flex-direction: column;
@@ -488,10 +499,6 @@ a {
     transform: translateX(100%);
     transition: transform var(--dur-slow) var(--ease);
     z-index: 999;
-  }
-
-  [data-theme="light"] .nav-menu {
-    background: rgba(245, 247, 252, 0.98);
   }
 
   .nav-menu.open {
@@ -883,7 +890,7 @@ a {
 }
 
 .hero-tagline {
-  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
   color: var(--text-2);
   font-weight: 300;
   line-height: 1.65;
@@ -1199,7 +1206,7 @@ a {
   color: var(--text-2);
   line-height: 1.8;
   margin-bottom: var(--sp-3);
-  font-size: 0.975rem;
+  font-size: 1.08rem;
 }
 
 .about-text p strong {
@@ -1424,7 +1431,7 @@ a {
 .exp-role {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.22rem;
   color: var(--text);
   margin-bottom: 4px;
 }
@@ -1469,7 +1476,7 @@ a {
   gap: 10px;
   padding: 8px 0;
   border-bottom: 1px solid var(--border);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: var(--text-2);
   line-height: 1.55;
 }
@@ -1622,14 +1629,14 @@ a {
 .proj-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.08rem;
+  font-size: 1.2rem;
   color: var(--text);
   margin-bottom: var(--sp-2);
   line-height: 1.3;
 }
 
 .proj-desc {
-  font-size: 0.855rem;
+  font-size: 0.94rem;
   color: var(--text-2);
   line-height: 1.65;
   margin-bottom: var(--sp-2);
@@ -1854,7 +1861,7 @@ a {
 .edu-degree {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.22rem;
   color: var(--text);
   margin-bottom: 6px;
   line-height: 1.3;
@@ -1867,7 +1874,7 @@ a {
 
 .edu-desc {
   color: var(--text-2);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: var(--sp-4);
 }

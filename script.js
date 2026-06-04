@@ -13,8 +13,7 @@ function initTheme() {
   const html = document.documentElement;
   const toggle = $('#theme-toggle');
   const stored = localStorage.getItem('portfolio-theme');
-  const prefer = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-  const theme = stored || prefer;
+  const theme = stored || 'dark';
 
   html.setAttribute('data-theme', theme);
 
