@@ -48,6 +48,7 @@
       <ul class="nav-menu" id="nav-menu">
 
         <li><a href="#about" class="nav-link" data-nav>About</a></li>
+        <li><a href="#pipeline" class="nav-link" data-nav>Pipeline</a></li>
         <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
         <li><a href="#experience" class="nav-link" data-nav>Experience</a></li>
         <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
@@ -192,6 +193,131 @@
             <span class="tag">Problem Solving</span>
 
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PIPELINE ═══════════ -->
+    <section id="pipeline" class="section pipeline-section" aria-label="Data Engineering Pipeline">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Architecture</p>
+          <h2 class="section-title">
+            Data Engineering <br class="br-desktop" />
+            <em class="serif-italic accent-text">Pipeline</em>
+          </h2>
+        </div>
+
+        <!-- Pipeline Flow -->
+        <div class="pipeline-flow-container reveal delay-2">
+          
+          <!-- Stage 1 -->
+          <div class="pipeline-stage" id="stage-ingest">
+            <div class="stage-card">
+              <div class="stage-header">
+                <span class="stage-num">01</span>
+                <div class="stage-icon-box">
+                  <i class="fa-solid fa-cloud-arrow-down" id="icon-ingest"></i>
+                </div>
+              </div>
+              <h3 class="stage-title" id="title-ingest">Data Ingestion</h3>
+              <p class="stage-desc" id="desc-ingest">
+                Extracting raw business &amp; application data from transactional databases, external SaaS tools, and telemetry files.
+              </p>
+              <div class="stage-tech-tags" id="tags-ingest">
+                <span class="pill pill-sm">APIs</span>
+                <span class="pill pill-sm">CSVs</span>
+                <span class="pill pill-sm">JSON</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connector 1 -->
+          <div class="pipeline-connector">
+            <svg class="pipeline-connector-svg" viewBox="0 0 40 40" fill="none">
+              <path d="M4 20H34M34 20L26 12M34 20L26 28" stroke="var(--border-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="4" cy="20" r="3.5" fill="var(--cyan)" class="connector-pulse" />
+            </svg>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="pipeline-stage" id="stage-process">
+            <div class="stage-card">
+              <div class="stage-header">
+                <span class="stage-num">02</span>
+                <div class="stage-icon-box">
+                  <i class="fa-solid fa-gears" id="icon-process"></i>
+                </div>
+              </div>
+              <h3 class="stage-title" id="title-process">ETL Processes</h3>
+              <p class="stage-desc" id="desc-process">
+                Running simple scripts on schedules to clean, deduplicate, and load data from source to target structures.
+              </p>
+              <div class="stage-tech-tags" id="tags-process">
+                <span class="pill pill-sm">Python</span>
+                <span class="pill pill-sm">Pandas</span>
+                <span class="pill pill-sm">Cron</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connector 2 -->
+          <div class="pipeline-connector">
+            <svg class="pipeline-connector-svg" viewBox="0 0 40 40" fill="none">
+              <path d="M4 20H34M34 20L26 12M34 20L26 28" stroke="var(--border-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="4" cy="20" r="3.5" fill="var(--violet)" class="connector-pulse" style="animation-delay: 0.5s;" />
+            </svg>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="pipeline-stage" id="stage-store">
+            <div class="stage-card">
+              <div class="stage-header">
+                <span class="stage-num">03</span>
+                <div class="stage-icon-box">
+                  <i class="fa-solid fa-database" id="icon-store"></i>
+                </div>
+              </div>
+              <h3 class="stage-title" id="title-store">Relational Storage</h3>
+              <p class="stage-desc" id="desc-store">
+                Organizing data in relational database management systems with static schemas and transactional tables.
+              </p>
+              <div class="stage-tech-tags" id="tags-store">
+                <span class="pill pill-sm">MySQL</span>
+                <span class="pill pill-sm">SQL Server</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connector 3 -->
+          <div class="pipeline-connector">
+            <svg class="pipeline-connector-svg" viewBox="0 0 40 40" fill="none">
+              <path d="M4 20H34M34 20L26 12M34 20L26 28" stroke="var(--border-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="4" cy="20" r="3.5" fill="var(--amber)" class="connector-pulse" style="animation-delay: 1s;" />
+            </svg>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="pipeline-stage" id="stage-serve">
+            <div class="stage-card">
+              <div class="stage-header">
+                <span class="stage-num">04</span>
+                <div class="stage-icon-box">
+                  <i class="fa-solid fa-chart-line" id="icon-serve"></i>
+                </div>
+              </div>
+              <h3 class="stage-title" id="title-serve">BI &amp; Analytics</h3>
+              <p class="stage-desc" id="desc-serve">
+                Creating standard business reports, pivot tables, and static visualizations for department managers.
+              </p>
+              <div class="stage-tech-tags" id="tags-serve">
+                <span class="pill pill-sm">Power BI</span>
+                <span class="pill pill-sm">Excel</span>
+                <span class="pill pill-sm">Tableau</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
