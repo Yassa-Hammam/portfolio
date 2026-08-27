@@ -318,6 +318,7 @@ a {
   font-size: 1.3rem;
   background: linear-gradient(135deg, var(--cyan), var(--violet));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -394,14 +395,23 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex: 0 0 auto;
 }
 
 .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
   padding: 6px 14px;
   border: 1px solid var(--border-2);
   border-radius: 8px;
   color: var(--cyan);
   font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  flex: 0 0 auto;
   transition: 0.3s;
 }
 
@@ -512,6 +522,20 @@ a {
 
   .hamburger {
     display: flex;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    gap: var(--sp-1);
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .nav-cta {
+    padding-inline: 10px;
   }
 }
 
@@ -1190,8 +1214,15 @@ a {
 
 .skill-pills {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: flex-start;
   gap: 8px;
+}
+
+/* Keep each skill tag sized to its content while allowing only whole tags to wrap. */
+.skill-pills>.pill {
+  flex: 0 0 auto;
 }
 
 /* ════════════════════════════════════════════
@@ -1785,16 +1816,21 @@ a {
 }
 
 .certs-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--sp-3);
   max-width: 960px;
   margin-inline: auto;
 }
 
+.certs-grid>* {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
-  .certs-grid {
-    grid-template-columns: 1fr 1fr;
+  .certs-grid>* {
+    width: calc(50% - (var(--sp-3) / 2));
   }
 }
 
@@ -2293,6 +2329,14 @@ a {
     text-align: center;
   }
 
+}
+
+.proj-title i {
+  margin-right: 6px;
+}
+
+#tab-data .proj-title i {
+  color: var(--violet);
 }
 
 @media (prefers-reduced-motion: reduce) {

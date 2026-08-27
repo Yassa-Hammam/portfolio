@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Yassa Hammam — Computer Science &amp; AI student and aspiring Data Engineer, building a strong foundation in data analysis, programming, and AI." />
+    content="Yassa Hammam(يسى همام) — Computer Science &amp; AI student and aspiring Data Engineer, building a strong foundation in data analysis, programming, and AI." />
   <meta name="keywords"
-    content="Yassa Hammam, Data Engineer, Data Analyst, Power BI, Python, AI, Machine Learning, Portfolio" />
-  <meta name="author" content="Yassa Hammam" />
+    content="Yassa Hammam(يسى همام), Data Engineer, Data Analyst, Power BI, Python, AI, Machine Learning, Portfolio" />
+  <meta name="author" content="Yassa Hammam(يسى همام)" />
   <meta property="og:title" content="Computer Science & AI Student | Aspiring Data Engineer" />
   <meta property="og:description"
     content="CS &amp; AI student building a strong foundation in data analysis, programming, and AI. Aspiring Data Engineer." />
@@ -48,7 +48,6 @@
       <ul class="nav-menu" id="nav-menu">
 
         <li><a href="#about" class="nav-link" data-nav>About</a></li>
-        <li><a href="#pipeline" class="nav-link" data-nav>Pipeline</a></li>
         <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
         <li><a href="#experience" class="nav-link" data-nav>Experience</a></li>
         <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
@@ -67,7 +66,7 @@
         </button>
 
         <a href="https://drive.google.com/file/d/12yXEzWz1nHPKMfJDJU7nVJs9RhCD0__B/view?usp=sharing" class="nav-cta"
-          id="cv-btn" target="_blank">
+          id="cv-btn" target="_blank" rel="noopener noreferrer" aria-label="Open CV in a new tab">
           View CV
         </a>
 
@@ -152,7 +151,7 @@
             <div class="avatar-ring ring-spin"></div>
             <div class="avatar-ring ring-spin-rev"></div>
             <div class="avatar-inner">
-              <img src="profile.png" alt="Yassa Hammam" class="avatar-photo" loading="eager"
+              <img src="profile.png" translate="no" alt="Yassa Hammam" class="avatar-photo" loading="eager"
                 onerror="this.style.display='none';document.querySelector('.avatar-initials').style.display='flex'" />
               <div class="avatar-initials" style="display: none;">YH</div>
             </div>
@@ -173,162 +172,173 @@
         <div class="section-header reveal">
           <p class="section-eyebrow">About Me</p>
           <h2 class="section-title">
-            Building at the<br />intersection of
-            <em class="serif-italic accent-text"> Data &amp; AI</em>
+            Building toward
+            <em class="serif-italic accent-text">Data Engineering</em>
           </h2>
         </div>
 
         <div class="about-text reveal">
-          <p>I'm a <strong>Computer Science &amp; Artificial Intelligence</strong> student at Capital University with a
+          <p>I'm a <strong>Computer Science &amp; Artificial Intelligence</strong> student at <strong>Capital
+              University</strong>
+            with a
             strong foundation in programming, data structures, databases, and data analytics.</p>
           <p>Skilled in tools such as <mark>Power BI, SQL Server, Excel,</mark> and <mark>Tableau</mark>, with hands-on
             experience in data visualization, reporting, and analytical problem solving.</p>
-          <p>Interested in <strong>Data Engineering, ETL Processes, Machine Learning,</strong> and <strong>AI
-              applications</strong>, with a continuous focus on improving technical and analytical skills.</p>
-          <p>Currently focused on deepening technical skills through the <strong>IBM Data Engineering Professional
-              Certificate</strong> and expanding hands-on project experience.</p>
+          <p>
+            My career focus is progressing from
+            Data Analytics toward <strong>Data Engineering</strong>,
+            with a particular interest in ETL, data pipelines, databases, and scalable data solutions.
+          </p>
+          <p>
+            Currently, I'm strengthening my technical foundation through the
+            <strong>IBM Data Engineering Professional Certificate</strong>
+            while building practical projects to apply what I learn.
+          </p>
 
           <div class="about-tags">
-            <span class="tag">ETL Processes</span>
             <span class="tag">Data Engineering</span>
+            <span class="tag">ETL &amp; Data Pipelines</span>
+            <span class="tag">Data Analytics</span>
             <span class="tag">Data Visualization</span>
-            <span class="tag">Problem Solving</span>
 
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ═══════════ PIPELINE ═══════════ -->
-    <section id="pipeline" class="section pipeline-section" aria-label="Data Engineering Foundations">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-eyebrow">Learning Path</p>
-          <h2 class="section-title">
-            Data Engineering <br class="br-desktop" />
-            <em class="serif-italic accent-text">Foundations</em>
-          </h2>
+        <!-- Integrated Data Engineering Pipeline / Journey -->
+        <div class="about-pipeline-container reveal delay-2" style="margin-top: var(--sp-8);">
+          <div class="subsection-header" style="margin-bottom: var(--sp-4);">
+            <p class="section-eyebrow">Learning Path</p>
+            <h3 class="subsection-title"
+              style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: var(--text);">
+              Data Engineering <br class="br-desktop" />
+              <em class="serif-italic accent-text">Journey</em>
+            </h3>
+          </div>
+
+          <!-- Pipeline Flow -->
+          <div class="pipeline-flow-container">
+
+            <!-- Stage 1 -->
+            <div class="pipeline-stage" id="stage-ingest">
+              <div class="stage-card">
+                <div class="stage-header">
+                  <span class="stage-num">01</span>
+                  <div class="stage-icon-box">
+                    <i class="fa-solid fa-cloud-arrow-down" id="icon-ingest"></i>
+                  </div>
+                </div>
+                <h3 class="stage-title" id="title-ingest">Data Ingestion</h3>
+                <p class="stage-desc" id="desc-ingest">
+                  Learning how raw data is collected from various sources — files, APIs, and databases — as the first
+                  step
+                  in any data pipeline.
+                </p>
+                <div class="stage-tech-tags" id="tags-ingest">
+                  <span class="pill pill-sm">APIs</span>
+                  <span class="pill pill-sm">CSVs</span>
+                  <span class="pill pill-sm">JSON</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Connector 1 -->
+            <div class="pipeline-connector">
+              <svg class="pipeline-connector-svg" viewBox="0 0 40 40" fill="none">
+                <path d="M4 20H34M34 20L26 12M34 20L26 28" stroke="var(--border-2)" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="4" cy="20" r="3.5" fill="var(--cyan)" class="connector-pulse" />
+              </svg>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="pipeline-stage" id="stage-process">
+              <div class="stage-card">
+                <div class="stage-header">
+                  <span class="stage-num">02</span>
+                  <div class="stage-icon-box">
+                    <i class="fa-solid fa-gears" id="icon-process"></i>
+                  </div>
+                </div>
+                <h3 class="stage-title" id="title-process">Data Processing</h3>
+                <p class="stage-desc" id="desc-process">
+                  Studying how data is cleaned, transformed, and structured using Python and Pandas — currently
+                  practising
+                  these skills through coursework and exercises.
+                </p>
+                <div class="stage-tech-tags" id="tags-process">
+                  <span class="pill pill-sm">Python</span>
+                  <span class="pill pill-sm">Pandas</span>
+                  <span class="pill pill-sm">CSV</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Connector 2 -->
+            <div class="pipeline-connector">
+              <svg class="pipeline-connector-svg" viewBox="0 0 40 40" fill="none">
+                <path d="M4 20H34M34 20L26 12M34 20L26 28" stroke="var(--border-2)" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="4" cy="20" r="3.5" fill="var(--violet)" class="connector-pulse"
+                  style="animation-delay: 0.5s;" />
+              </svg>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="pipeline-stage" id="stage-store">
+              <div class="stage-card">
+                <div class="stage-header">
+                  <span class="stage-num">03</span>
+                  <div class="stage-icon-box">
+                    <i class="fa-solid fa-database" id="icon-store"></i>
+                  </div>
+                </div>
+                <h3 class="stage-title" id="title-store">Relational Storage</h3>
+                <p class="stage-desc" id="desc-store">
+                  Learning relational database concepts — how data is organised into schemas, tables, and relationships
+                  using SQL and DBMS fundamentals.
+                </p>
+                <div class="stage-tech-tags" id="tags-store">
+                  <span class="pill pill-sm">MySQL</span>
+                  <span class="pill pill-sm">SQL Server</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Connector 3 -->
+            <div class="pipeline-connector">
+              <svg class="pipeline-connector-svg" viewBox="0 0 40 40" fill="none">
+                <path d="M4 20H34M34 20L26 12M34 20L26 28" stroke="var(--border-2)" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="4" cy="20" r="3.5" fill="var(--amber)" class="connector-pulse"
+                  style="animation-delay: 1s;" />
+              </svg>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="pipeline-stage" id="stage-serve">
+              <div class="stage-card">
+                <div class="stage-header">
+                  <span class="stage-num">04</span>
+                  <div class="stage-icon-box">
+                    <i class="fa-solid fa-chart-line" id="icon-serve"></i>
+                  </div>
+                </div>
+                <h3 class="stage-title" id="title-serve">BI &amp; Analytics</h3>
+                <p class="stage-desc" id="desc-serve">
+                  Applying data analysis and visualisation skills using Power BI and Excel — areas I have hands-on
+                  experience with through coursework and completed projects.
+                </p>
+                <div class="stage-tech-tags" id="tags-serve">
+                  <span class="pill pill-sm">Power BI</span>
+                  <span class="pill pill-sm">Excel</span>
+                  <span class="pill pill-sm">Tableau</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-        <!-- Pipeline Flow -->
-        <div class="pipeline-flow-container reveal delay-2">
-
-          <!-- Stage 1 -->
-          <div class="pipeline-stage" id="stage-ingest">
-            <div class="stage-card">
-              <div class="stage-header">
-                <span class="stage-num">01</span>
-                <div class="stage-icon-box">
-                  <i class="fa-solid fa-cloud-arrow-down" id="icon-ingest"></i>
-                </div>
-              </div>
-              <h3 class="stage-title" id="title-ingest">Data Ingestion</h3>
-              <p class="stage-desc" id="desc-ingest">
-                Learning how raw data is collected from various sources — files, APIs, and databases — as the first step
-                in any data pipeline.
-              </p>
-              <div class="stage-tech-tags" id="tags-ingest">
-                <span class="pill pill-sm">APIs</span>
-                <span class="pill pill-sm">CSVs</span>
-                <span class="pill pill-sm">JSON</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Connector 1 -->
-          <div class="pipeline-connector">
-            <svg class="pipeline-connector-svg" viewBox="0 0 40 40" fill="none">
-              <path d="M4 20H34M34 20L26 12M34 20L26 28" stroke="var(--border-2)" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="4" cy="20" r="3.5" fill="var(--cyan)" class="connector-pulse" />
-            </svg>
-          </div>
-
-          <!-- Stage 2 -->
-          <div class="pipeline-stage" id="stage-process">
-            <div class="stage-card">
-              <div class="stage-header">
-                <span class="stage-num">02</span>
-                <div class="stage-icon-box">
-                  <i class="fa-solid fa-gears" id="icon-process"></i>
-                </div>
-              </div>
-              <h3 class="stage-title" id="title-process">Data Processing</h3>
-              <p class="stage-desc" id="desc-process">
-                Studying how data is cleaned, transformed, and structured using Python and Pandas — currently practising
-                these skills through coursework and exercises.
-              </p>
-              <div class="stage-tech-tags" id="tags-process">
-                <span class="pill pill-sm">Python</span>
-                <span class="pill pill-sm">Pandas</span>
-                <span class="pill pill-sm">CSV</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Connector 2 -->
-          <div class="pipeline-connector">
-            <svg class="pipeline-connector-svg" viewBox="0 0 40 40" fill="none">
-              <path d="M4 20H34M34 20L26 12M34 20L26 28" stroke="var(--border-2)" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="4" cy="20" r="3.5" fill="var(--violet)" class="connector-pulse"
-                style="animation-delay: 0.5s;" />
-            </svg>
-          </div>
-
-          <!-- Stage 3 -->
-          <div class="pipeline-stage" id="stage-store">
-            <div class="stage-card">
-              <div class="stage-header">
-                <span class="stage-num">03</span>
-                <div class="stage-icon-box">
-                  <i class="fa-solid fa-database" id="icon-store"></i>
-                </div>
-              </div>
-              <h3 class="stage-title" id="title-store">Relational Storage</h3>
-              <p class="stage-desc" id="desc-store">
-                Learning relational database concepts — how data is organised into schemas, tables, and relationships
-                using SQL and DBMS fundamentals.
-              </p>
-              <div class="stage-tech-tags" id="tags-store">
-                <span class="pill pill-sm">MySQL</span>
-                <span class="pill pill-sm">SQL Server</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Connector 3 -->
-          <div class="pipeline-connector">
-            <svg class="pipeline-connector-svg" viewBox="0 0 40 40" fill="none">
-              <path d="M4 20H34M34 20L26 12M34 20L26 28" stroke="var(--border-2)" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="4" cy="20" r="3.5" fill="var(--amber)" class="connector-pulse" style="animation-delay: 1s;" />
-            </svg>
-          </div>
-
-          <!-- Stage 4 -->
-          <div class="pipeline-stage" id="stage-serve">
-            <div class="stage-card">
-              <div class="stage-header">
-                <span class="stage-num">04</span>
-                <div class="stage-icon-box">
-                  <i class="fa-solid fa-chart-line" id="icon-serve"></i>
-                </div>
-              </div>
-              <h3 class="stage-title" id="title-serve">BI &amp; Analytics</h3>
-              <p class="stage-desc" id="desc-serve">
-                Applying data analysis and visualisation skills using Power BI and Excel — areas I have hands-on
-                experience with through coursework and completed projects.
-              </p>
-              <div class="stage-tech-tags" id="tags-serve">
-                <span class="pill pill-sm">Power BI</span>
-                <span class="pill pill-sm">Excel</span>
-                <span class="pill pill-sm">Tableau</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
 
@@ -343,62 +353,62 @@
         <div class="skills-grid">
           <article class="skill-card reveal delay-1">
             <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
-            <h3 class="skill-card-title">Programming Languages</h3>
+            <h3 class="skill-card-title">Programming &amp; CS</h3>
             <div class="skill-pills">
-              <span class="pill"><i class="fa-brands fa-python"></i><span> Python</span></span>
-
-              <span class="pill"><i class="fa-brands fa-java"></i><span> Java</span></span>
-
-              <span class="pill"><i class="fa-solid fa-c"></i><span> C</span></span>
-
-              <span class="pill"><i class="fa-brands fa-js"></i><span> JavaScript</span></span>
-
-              <span class="pill"><i class="fa-brands fa-html5"></i><span> HTML5</span></span>
-
-              <span class="pill"><i class="fa-brands fa-css3-alt"></i><span> CSS3</span></span>
-
+              <span class="pill">Python</span>
+              <span class="pill">Java</span>
+              <span class="pill">C</span>
+              <span class="pill">OOP</span>
+              <span class="pill">Data Structures</span>
+              <span class="pill">Algorithms</span>
+              <span class="pill">Problem Solving</span>
             </div>
           </article>
 
           <article class="skill-card reveal delay-2">
             <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-database"></i></div>
-            <h3 class="skill-card-title">Data &amp;Databases</h3>
+            <h3 class="skill-card-title">Data Engineering &amp; Databases</h3>
             <div class="skill-pills">
-              <span class="pill"> SQL</span>
-              <span class="pill"> MySQL</span>
-              <span class="pill"><i class="fa-brands fa-python"></i><span> Pandas</span></span>
-              <span class="pill"> DBMS</span>
+              <span class="pill">SQL</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">DBMS</span>
+              <span class="pill">Data Cleaning</span>
+              <span class="pill">Data Preprocessing</span>
             </div>
           </article>
 
           <article class="skill-card reveal delay-3">
-            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-column"></i></div>
-            <h3 class="skill-card-title">Data Analytics &amp;BI</h3>
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
+            <h3 class="skill-card-title">Data Processing &amp; Analysis</h3>
             <div class="skill-pills">
-              <span class="pill">Power BI</span>
+              <span class="pill">Pandas</span>
               <span class="pill">Excel</span>
-              <span class="pill">Tableau</span>
-              <span class="pill">Data Cleaning</span>
-              <span class="pill">Data Preprocessing</span>
+              <span class="pill">Data Mining</span>
               <span class="pill">Data Visualization</span>
             </div>
           </article>
 
           <article class="skill-card reveal delay-4">
-            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-gears"></i></div>
-            <h3 class="skill-card-title">Foundations</h3>
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-column"></i></div>
+            <h3 class="skill-card-title">Business Intelligence &amp; Reporting</h3>
             <div class="skill-pills">
-              <span class="pill">Data Structures</span>
-              <span class="pill">OOP</span>
-              <span class="pill">Data Mining</span>
-              <span class="pill">Algorithms</span>
-              <span class="pill">Problem Solving</span>
+              <span class="pill">Power BI</span>
+              <span class="pill">Tableau</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal delay-5">
+            <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></div>
+            <h3 class="skill-card-title">Web Development</h3>
+            <div class="skill-pills">
+              <span class="pill">HTML5</span>
+              <span class="pill">CSS3</span>
+              <span class="pill">JavaScript</span>
             </div>
           </article>
         </div>
       </div>
     </section>
-
     <!-- ═══════════ EXPERIENCE ═══════════ -->
     <section id="experience" class="section experience-section" aria-label="Work experience">
       <div class="container">
@@ -502,255 +512,298 @@
     <!-- ═══════════ PROJECTS ═══════════ -->
     <section id="projects" class="section projects-section" aria-label="Portfolio projects">
       <div class="container">
+
         <div class="section-header reveal">
           <p class="section-eyebrow">Portfolio</p>
-          <h2 class="section-title">Featured <em class="serif-italic accent-text">Projects</em></h2>
+          <h2 class="section-title">
+            Featured <em class="serif-italic accent-text">Projects</em>
+          </h2>
         </div>
 
-        <div class="tab-group reveal" role="tablist" aria-label="Project categories">
-          <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-data" id="btn-data"
-            data-tab="data">
-            <i class="fa-solid fa-chart-column" style="margin-right: 6px;"></i> Data Analysis &amp; BI
-          </button>
-          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-web" id="btn-web" data-tab="web">
-            <i class="fa-solid fa-globe" style="margin-right: 6px;"></i> Web Development
-          </button>
-        </div>
+        <!-- ==================== DATA PROJECTS ==================== -->
 
-        <!-- Web Projects -->
-        <div class="projects-panel" id="tab-web" role="tabpanel" aria-labelledby="btn-web" hidden>
-          <div class="projects-grid">
-
-            <article class="proj-card reveal" aria-label="Restaurant Website project">
-              <div class="proj-card-inner">
-                <header class="proj-header">
-                  <span class="proj-badge badge-web">Web Dev</span>
-                </header>
-                <h3 class="proj-title"><i class="fa-solid fa-utensils"
-                    style="color: var(--cyan); margin-right: 6px;"></i> Restaurant Website</h3>
-                <p class="proj-desc">A modern digital presence for small restaurants — featuring menu showcasing, smooth
-                  UX, and a mobile-first layout built with HTML, CSS, and JavaScript.</p>
-                <div class="proj-stack">
-                  <span class="pill pill-sm">HTML5</span>
-                  <span class="pill pill-sm">CSS3</span>
-                  <span class="pill pill-sm">JavaScript</span>
-                </div>
-                <div class="proj-outcome">
-                  <strong>Features:</strong> Responsive layout · Interactive menu · Smooth scroll animations
-                </div>
-              </div>
-            </article>
-
-            <article class="proj-card reveal delay-2" aria-label="Tourism Website project">
-              <div class="proj-card-inner">
-                <header class="proj-header">
-                  <span class="proj-badge badge-web">Web Dev</span>
-                </header>
-                <h3 class="proj-title"><i class="fa-solid fa-plane" style="color: var(--cyan); margin-right: 6px;"></i>
-                  Tourism Website</h3>
-                <p class="proj-desc">An immersive digital platform for tourism destinations — showcasing places and
-                  attractions through visual storytelling and interactive UI elements.</p>
-                <div class="proj-stack">
-                  <span class="pill pill-sm">HTML5</span>
-                  <span class="pill pill-sm">CSS3</span>
-                  <span class="pill pill-sm">JavaScript</span>
-                </div>
-                <div class="proj-outcome">
-                  <strong>Features:</strong> Destination showcase · Smooth scrolling · Interactive components
-                </div>
-              </div>
-            </article>
-
-          </div>
-          <div class="projects-more-container">
-            <button class="btn btn-outline show-more-btn" data-panel="tab-web">
-              <span>Show More</span> <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Data Projects -->
         <div class="projects-panel active" id="tab-data" role="tabpanel" aria-labelledby="btn-data">
+
           <div class="projects-grid">
+
 
             <!-- 1. E-commerce Sales Analysis -->
-            <article class="proj-card reveal" aria-label="E-commerce Sales Dashboard project">
+            <article class="proj-card reveal" aria-label="E-commerce Sales Analysis project">
+
               <div class="proj-card-inner">
+
                 <header class="proj-header">
                   <span class="proj-badge badge-data">BI Dashboard</span>
                 </header>
-                <h3 class="proj-title"><i class="fa-solid fa-bag-shopping"
-                    style="color: var(--violet); margin-right: 6px;"></i> E-commerce Sales Analysis</h3>
-                <p class="proj-desc">Power BI dashboard on Brazil's Olist dataset — exploring order patterns, payment
-                  methods, delivery times, and regional sales across 96K+ orders.</p>
+
+                <h3 class="proj-title">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  E-commerce Sales Analysis
+                </h3>
+
+                <p class="proj-desc">
+                  Power BI analysis of 96K+ Brazilian Olist orders and
+                  13.59M BRL in net sales, focusing on sales distribution,
+                  delivery performance, and payment behavior.
+                </p>
+
                 <div class="proj-stack">
                   <span class="pill pill-sm">Power BI</span>
                   <span class="pill pill-sm">Power Query</span>
                   <span class="pill pill-sm">DAX</span>
                   <span class="pill pill-sm">Data Modeling</span>
                 </div>
+
                 <ul class="proj-features" role="list">
-                  <li>13.59M BRL net sales · 96K+ orders analyzed</li>
-                  <li>Category, state &amp; payment method breakdowns</li>
-                  <li>Custom tooltips &amp; slicers for interactive filtering</li>
+                  <li>Built a star-schema model for 96K+ orders</li>
+                  <li>Analyzed sales across products, states, and payment methods</li>
+                  <li>Created DAX measures, drill-throughs, and interactive slicers</li>
                 </ul>
+
                 <div class="proj-outcome">
-                  <strong>Key Insights:</strong> Top-selling categories and highest-performing states by sales volume.
+                  <strong>Key Insight:</strong>
+                  Sales volume was concentrated in major states, while revenue
+                  performance varied across product categories and payment methods.
                 </div>
+
                 <div class="proj-links">
-                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-dashboarddesign-activity-7358503456132796416-y1F2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-dashboarddesign-activity-7358503456132796416-y1F2"
                     target="_blank" rel="noopener noreferrer" class="proj-link-btn"
                     aria-label="View E-commerce Sales Analysis on LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+
+                    <i class="fa-brands fa-linkedin"></i>
+                    View on LinkedIn
+
                   </a>
                 </div>
+
               </div>
             </article>
+
 
             <!-- 2. Amazon Sales Analysis -->
             <article class="proj-card reveal delay-1" aria-label="Amazon Sales Analysis project">
-              <div class="proj-card-inner">
-                <header class="proj-header">
-                  <span class="proj-badge badge-data">BI Dashboard</span>
-                </header>
-                <h3 class="proj-title"><i class="fa-solid fa-cart-shopping"
-                    style="color: var(--violet); margin-right: 6px;"></i> Amazon Sales Analysis</h3>
-                <p class="proj-desc">Analysis of Amazon product sales data using Excel and Power BI — examining
-                  product performance, pricing, customer ratings, and category-level sales trends.</p>
-                <div class="proj-stack">
-                  <span class="pill pill-sm">Excel</span>
-                  <span class="pill pill-sm">Power BI</span>
-                  <span class="pill pill-sm">Kaggle</span>
-                </div>
-                <ul class="proj-features" role="list">
-                  <li>Top products ranked by sales &amp; rating</li>
-                  <li>Revenue trends by month and category</li>
-                  <li>Customer review and rating distribution</li>
-                </ul>
-                <div class="proj-outcome">
-                  <strong>Key Insights:</strong> Highest-rated and best-selling categories with pricing and review
-                  patterns.
-                </div>
-                <div class="proj-links">
-                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-dashboarddesign-activity-7351594579667636224-iVMX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
-                    target="_blank" rel="noopener noreferrer" class="proj-link-btn"
-                    aria-label="View Amazon Sales Analysis on LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i> View on LinkedIn
-                  </a>
-                </div>
-              </div>
-            </article>
 
-            <!-- 3. Spotify Data Analysis -->
-            <article class="proj-card reveal delay-2" aria-label="Spotify Data Analysis project">
               <div class="proj-card-inner">
+
                 <header class="proj-header">
                   <span class="proj-badge badge-data">Data Analysis</span>
                 </header>
-                <h3 class="proj-title"><i class="fa-solid fa-music"
-                    style="color: var(--violet); margin-right: 6px;"></i> Spotify Data Analysis</h3>
-                <p class="proj-desc">Analysis of a Spotify dataset using Excel and Power BI — exploring top artists,
-                  trending tracks, genre distribution, and streaming patterns over time.</p>
+
+                <h3 class="proj-title">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  Amazon Sales Analysis
+                </h3>
+
+                <p class="proj-desc">
+                  Exploratory analysis of Amazon product listings using Excel
+                  and Power BI to examine pricing, customer ratings, and revenue trends.
+                </p>
+
+                <div class="proj-stack">
+                  <span class="pill pill-sm">Excel</span>
+                  <span class="pill pill-sm">Power BI</span>
+                  <span class="pill pill-sm">Power Query</span>
+                  <span class="pill pill-sm">Kaggle</span>
+                </div>
+
+                <ul class="proj-features" role="list">
+                  <li>Cleaned and transformed raw product data</li>
+                  <li>Compared product revenue, pricing, and customer ratings</li>
+                  <li>Visualized monthly revenue and category-level patterns</li>
+                </ul>
+
+                <div class="proj-outcome">
+                  <strong>Key Insight:</strong>
+                  Higher-priced products generally received fewer reviews,
+                  while highly rated products were frequently among top revenue performers.
+                </div>
+
+                <div class="proj-links">
+                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-dashboarddesign-activity-7351594579667636224-iVMX"
+                    target="_blank" rel="noopener noreferrer" class="proj-link-btn"
+                    aria-label="View Amazon Sales Analysis on LinkedIn">
+
+                    <i class="fa-brands fa-linkedin"></i>
+                    View on LinkedIn
+
+                  </a>
+                </div>
+
+              </div>
+            </article>
+
+
+            <!-- 3. Spotify Data Analysis -->
+            <article class="proj-card reveal delay-2" aria-label="Spotify Data Analysis project">
+
+              <div class="proj-card-inner">
+
+                <header class="proj-header">
+                  <span class="proj-badge badge-data">Data Analysis</span>
+                </header>
+
+                <h3 class="proj-title">
+                  <i class="fa-solid fa-music"></i>
+                  Spotify Data Analysis
+                </h3>
+
+                <p class="proj-desc">
+                  Analysis of Spotify streaming data using Excel and Power BI,
+                  exploring artists, genres, streams, and release-year trends.
+                </p>
+
                 <div class="proj-stack">
                   <span class="pill pill-sm">Excel</span>
                   <span class="pill pill-sm">Power BI</span>
                   <span class="pill pill-sm">Kaggle</span>
                 </div>
+
                 <ul class="proj-features" role="list">
-                  <li>Top artists and tracks ranked by streams</li>
-                  <li>Genre distribution across the dataset</li>
-                  <li>Listening frequency patterns over time</li>
+                  <li>Analyzed streams across artists, tracks, and genres</li>
+                  <li>Compared popularity trends across release years</li>
+                  <li>Examined audio features and listening patterns</li>
                 </ul>
+
                 <div class="proj-outcome">
-                  <strong>Key Insights:</strong> Most-streamed genres and artists, with popularity variation by release
-                  year.
+                  <strong>Key Insight:</strong>
+                  Recent releases accounted for a large share of total streams,
+                  while several older tracks maintained strong long-term popularity.
                 </div>
+
                 <div class="proj-links">
-                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-spotifydashboard-nti-activity-7352387256441036800--GL7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-spotifydashboard-nti-activity-7352387256441036800--GL7"
                     target="_blank" rel="noopener noreferrer" class="proj-link-btn"
                     aria-label="View Spotify Data Analysis on LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+
+                    <i class="fa-brands fa-linkedin"></i>
+                    View on LinkedIn
+
                   </a>
                 </div>
+
               </div>
             </article>
 
+
             <!-- 4. Electric Vehicles Dashboard -->
             <article class="proj-card reveal delay-3" aria-label="Electric Vehicles Dashboard project">
+
               <div class="proj-card-inner">
+
                 <header class="proj-header">
                   <span class="proj-badge badge-data">BI Dashboard</span>
                 </header>
-                <h3 class="proj-title"><i class="fa-solid fa-bolt" style="color: var(--violet); margin-right: 6px;"></i>
-                  Electric Vehicles Dashboard</h3>
-                <p class="proj-desc">Dual Power BI and Tableau dashboards analyzing an EV dataset — comparing 264
-                  models across 35+ brands by range, specs, and adoption trends over time.</p>
+
+                <h3 class="proj-title">
+                  <i class="fa-solid fa-bolt"></i>
+                  Electric Vehicles Dashboard
+                </h3>
+
+                <p class="proj-desc">
+                  Comparative analysis of 264 EV models across 35+ brands,
+                  evaluating electric range, battery performance, and adoption trends.
+                </p>
+
                 <div class="proj-stack">
                   <span class="pill pill-sm">Excel</span>
                   <span class="pill pill-sm">Power BI</span>
                   <span class="pill pill-sm">Tableau</span>
                   <span class="pill pill-sm">Kaggle</span>
                 </div>
+
                 <ul class="proj-features" role="list">
-                  <li>264 EV models across 35+ brands compared</li>
-                  <li>Range and performance metrics by vehicle type</li>
-                  <li>EV adoption growth by year and region</li>
+                  <li>Benchmarked 264 EV models across 35+ manufacturers</li>
+                  <li>Compared range and battery performance metrics</li>
+                  <li>Tracked regional adoption patterns over time</li>
                 </ul>
+
                 <div class="proj-outcome">
-                  <strong>Key Insights:</strong> Brands leading in range and efficiency, and adoption trends by market
-                  segment.
+                  <strong>Key Insight:</strong>
+                  Electric range differed substantially by vehicle type,
+                  with adoption concentrated among leading manufacturers.
                 </div>
+
                 <div class="proj-links">
-                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-electricvehicles-activity-7353868217234198532-Ri2U?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-electricvehicles-activity-7353868217234198532-Ri2U"
                     target="_blank" rel="noopener noreferrer" class="proj-link-btn"
                     aria-label="View Electric Vehicles Dashboard on LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+
+                    <i class="fa-brands fa-linkedin"></i>
+                    View on LinkedIn
+
                   </a>
                 </div>
+
               </div>
             </article>
 
+
             <!-- 5. Fitbit Marketing Dashboard -->
             <article class="proj-card reveal delay-4" aria-label="Fitbit Marketing Dashboard project">
+
               <div class="proj-card-inner">
+
                 <header class="proj-header">
                   <span class="proj-badge badge-data">BI Dashboard</span>
                 </header>
-                <h3 class="proj-title"><i class="fa-solid fa-mobile-screen-button"
-                    style="color: var(--violet); margin-right: 6px;"></i> Fitbit Marketing Dashboard</h3>
-                <p class="proj-desc">Power BI dashboard analyzing a Fitbit marketing dataset — breaking down
-                  impressions, clicks, and conversions by age group, platform, and region.</p>
+
+                <h3 class="proj-title">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                  Fitbit Marketing Dashboard
+                </h3>
+
+                <p class="proj-desc">
+                  Power BI marketing dashboard analyzing campaign performance,
+                  audience segments, click-through rates, and conversions.
+                </p>
+
                 <div class="proj-stack">
                   <span class="pill pill-sm">Power BI</span>
                   <span class="pill pill-sm">DAX</span>
                   <span class="pill pill-sm">Data Visualization</span>
                 </div>
+
                 <ul class="proj-features" role="list">
-                  <li>48K impressions · 10% CTR · 4,830 clicks</li>
-                  <li>Clicks segmented by age group &amp; platform</li>
-                  <li>Monthly trends and regional conversion breakdown</li>
+                  <li>Analyzed 48K impressions and a 10% CTR</li>
+                  <li>Segmented engagement across demographics and channels</li>
+                  <li>Built DAX metrics for conversion performance and campaign value</li>
                 </ul>
+
                 <div class="proj-outcome">
-                  <strong>Key Insights:</strong> Top campaigns and regions by clicks and conversions (1,496 conversions
-                  · $411K value).
+                  <strong>Key Insight:</strong>
+                  The campaign generated 4,830 clicks and 1,496 conversions,
+                  representing approximately $411K in attributed value.
                 </div>
+
                 <div class="proj-links">
-                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-dashboarddesign-activity-7351069159125897216-djnq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFuCj3QBOGIlvsD2n6PTqf2znAiU6xdLaDw"
+                  <a href="https://www.linkedin.com/posts/yassa-hammam_powerbi-dataanalytics-dashboarddesign-activity-7351069159125897216-djnq"
                     target="_blank" rel="noopener noreferrer" class="proj-link-btn"
                     aria-label="View Fitbit Marketing Dashboard on LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+
+                    <i class="fa-brands fa-linkedin"></i>
+                    View on LinkedIn
+
                   </a>
                 </div>
+
               </div>
             </article>
 
           </div>
+
+
           <div class="projects-more-container">
             <button class="btn btn-outline show-more-btn" data-panel="tab-data">
-              <span>Show More</span> <i class="fa-solid fa-chevron-down"></i>
+
+              <span>Show More</span>
+              <i class="fa-solid fa-chevron-down"></i>
+
             </button>
           </div>
+
         </div>
+
       </div>
     </section>
 
@@ -775,7 +828,7 @@
               and software engineering fundamentals.</p>
             <div class="edu-badges">
               <span class="edu-badge">2024 – 2028</span>
-              <span class="edu-badge edu-badge-gpa">GPA: 3.00 / 4.0</span>
+              <span class="edu-badge edu-badge-gpa">GPA: 3.02 / 4.0</span>
               <span class="edu-badge">Bachelor's Degree</span>
             </div>
           </article>
@@ -1004,39 +1057,6 @@
               </div>
             </div>
           </article>
-
-          <!-- Python Programming -->
-          <article class="cert-card cert-card--learning reveal delay-2"
-            aria-label="Python Programming - Currently Learning">
-            <header class="cert-header">
-              <div class="cert-header-left">
-                <div class="cert-icon cert-icon--learning" aria-hidden="true"><i class="fa-brands fa-python"></i></div>
-                <div class="cert-meta">
-                  <h4 class="cert-name">Python Programming</h4>
-                  <p class="cert-issuer">Self-Paced / Coursework</p>
-                </div>
-              </div>
-              <div class="cert-date cert-date--learning">Currently Learning</div>
-            </header>
-
-            <p class="cert-desc">
-              Strengthening Python programming fundamentals and problem-solving skills.
-            </p>
-
-            <div class="cert-footer">
-              <div class="cert-tags">
-                <span class="pill pill-sm">Python</span>
-                <span class="pill pill-sm">Programming</span>
-                <span class="pill pill-sm">Problem Solving</span>
-                <span class="pill pill-sm">Algorithms</span>
-              </div>
-              <div class="cert-actions">
-                <div class="cert-learning-badge" aria-label="Currently Learning" aria-hidden="true">
-                  <i class="fa-solid fa-spinner"></i>
-                </div>
-              </div>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -1126,7 +1146,7 @@
         </a>
 
         <p translate="no" class="footer-copy">
-          © <span  id="footer-year"></span> Yassa Hammam. All rights reserved.
+          © <span id="footer-year"></span> Yassa Hammam. All rights reserved.
         </p>
       </div>
 
