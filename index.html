@@ -29,7 +29,8 @@
 <body>
 
   <!-- Scroll progress bar -->
-  <div class="scroll-bar" id="scroll-bar" role="progressbar" aria-label="Page scroll progress"></div>
+  <div class="scroll-bar" id="scroll-bar" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100"></div>
 
   <!-- Noise overlay -->
   <div class="noise-overlay" aria-hidden="true"></div>
@@ -151,8 +152,7 @@
             <div class="avatar-ring ring-spin"></div>
             <div class="avatar-ring ring-spin-rev"></div>
             <div class="avatar-inner">
-              <img src="profile.png" translate="no" alt="Yassa Hammam" class="avatar-photo" loading="eager"
-                onerror="this.style.display='none';document.querySelector('.avatar-initials').style.display='flex'" />
+              <img src="profile.png" translate="no" alt="Yassa Hammam" class="avatar-photo" loading="eager" />
               <div class="avatar-initials" style="display: none;">YH</div>
             </div>
             <div class="avatar-glow"></div>
@@ -353,7 +353,7 @@
         <div class="skills-grid">
           <article class="skill-card reveal delay-1">
             <div class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
-            <h3 class="skill-card-title">Programming &amp; CS</h3>
+            <h3 class="skill-card-title">Programming &amp; Software Development</h3>
             <div class="skill-pills">
               <span class="pill">Python</span>
               <span class="pill">Java</span>
@@ -521,6 +521,13 @@
         </div>
 
         <!-- ==================== DATA PROJECTS ==================== -->
+
+        <div class="tab-group" role="tablist" aria-label="Project Categories">
+          <button class="tab active" id="btn-data" data-tab="data" role="tab" aria-selected="true"
+            aria-controls="tab-data">
+            <i class="fa-solid fa-chart-line"></i> Data Projects
+          </button>
+        </div>
 
         <div class="projects-panel active" id="tab-data" role="tabpanel" aria-labelledby="btn-data">
 
@@ -794,7 +801,7 @@
 
 
           <div class="projects-more-container">
-            <button class="btn btn-outline show-more-btn" data-panel="tab-data">
+            <button class="btn btn-outline show-more-btn" data-panel="tab-data" aria-expanded="false">
 
               <span>Show More</span>
               <i class="fa-solid fa-chevron-down"></i>

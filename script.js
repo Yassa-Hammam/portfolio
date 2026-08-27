@@ -1,5 +1,3 @@
-
-
 'use strict';
 
 /* ── Helpers ── */
@@ -25,7 +23,29 @@ function initTheme() {
 }
 
 /* ════════════════════════════════════════════
-   NAVIGATION
+   AVATAR FALLBACK
+   ════════════════════════════════════════════ */
+function initAvatarFallback() {
+  const avatarImg = $('.avatar-photo');
+  const initials = $('.avatar-initials');
+
+  if (avatarImg && initials) {
+    const handleAvatarError = () => {
+      avatarImg.style.display = 'none';
+      initials.style.display = 'flex';
+    };
+
+    avatarImg.addEventListener('error', handleAvatarError);
+
+    // Check if the image already failed to load before listener was attached
+    if (avatarImg.complete && avatarImg.naturalWidth === 0) {
+      handleAvatarError();
+    }
+  }
+}
+
+/* ════════════════════════════════════════════
+   NAVIGATION & ACCESSIBLE MOBILE MENU
    ════════════════════════════════════════════ */
 function initNav() {
   const header = $('#site-header');
@@ -33,47 +53,97 @@ function initNav() {
   const navMenu = $('#nav-menu');
   const navLinks = $$('[data-nav]');
 
+  const focusableSelector = [
+    'a[href]',
+    'button:not([disabled])',
+    'input:not([disabled])',
+    'select:not([disabled])',
+    'textarea:not([disabled])',
+    '[tabindex]:not([tabindex="-1"])'
+  ].join(',');
+
   /* Scroll-based header styling */
   window.addEventListener('scroll', () => {
     header?.classList.toggle('scrolled', window.scrollY > 60);
     updateActiveNav();
   }, { passive: true });
 
+  function openMenu() {
+    navMenu?.classList.add('open');
+    hamburger?.classList.add('open');
+    hamburger?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+
+    // Move focus inside menu
+    const focusables = navMenu ? $$(focusableSelector, navMenu) : [];
+    if (focusables.length > 0) {
+      focusables[0].focus();
+    }
+  }
+
+  function closeMenu() {
+    if (!navMenu?.classList.contains('open')) return;
+    navMenu.classList.remove('open');
+    hamburger?.classList.remove('open');
+    hamburger?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    hamburger?.focus();
+  }
+
   /* Hamburger toggle */
   hamburger?.addEventListener('click', () => {
-    const open = navMenu?.classList.toggle('open');
-    hamburger.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', String(open));
-    document.body.style.overflow = open ? 'hidden' : '';
+    const isOpen = navMenu?.classList.contains('open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
   /* Close menu on link click */
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      navMenu?.classList.remove('open');
-      hamburger?.classList.remove('open');
-      hamburger?.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      closeMenu();
     });
   });
 
   /* Close on outside click */
   document.addEventListener('click', (e) => {
     if (!header?.contains(e.target) && navMenu?.classList.contains('open')) {
-      navMenu.classList.remove('open');
-      hamburger?.classList.remove('open');
-      hamburger?.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      closeMenu();
     }
   });
 
-  /* Keyboard nav */
+  /* Keyboard focus trap & Escape key handler */
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navMenu?.classList.contains('open')) {
-      navMenu.classList.remove('open');
-      hamburger?.classList.remove('open');
-      hamburger?.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+    if (!navMenu?.classList.contains('open')) return;
+
+    if (e.key === 'Escape') {
+      closeMenu();
+      return;
+    }
+
+    if (e.key === 'Tab') {
+      const focusables = $$(focusableSelector, navMenu);
+      if (focusables.length === 0) {
+        e.preventDefault();
+        return;
+      }
+
+      const firstEl = focusables[0];
+      const lastEl = focusables[focusables.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstEl || !navMenu.contains(document.activeElement)) {
+          e.preventDefault();
+          lastEl.focus();
+        }
+      } else {
+        if (document.activeElement === lastEl || !navMenu.contains(document.activeElement)) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
     }
   });
 
@@ -110,7 +180,9 @@ function initScrollProgress() {
     const scrolled = window.scrollY;
     const total = document.body.scrollHeight - window.innerHeight;
     const pct = total > 0 ? (scrolled / total) * 100 : 0;
-    bar.style.width = `${Math.min(pct, 100)}%`;
+    const rounded = Math.min(Math.round(pct), 100);
+    bar.style.width = `${rounded}%`;
+    bar.setAttribute('aria-valuenow', String(rounded));
   }, { passive: true });
 }
 
@@ -156,8 +228,6 @@ function initScrollReveal() {
   return observer;
 }
 
-
-
 /* ════════════════════════════════════════════
    PROJECT TABS
    ════════════════════════════════════════════ */
@@ -198,23 +268,23 @@ function initTabs() {
   });
 }
 
-
-
 /* ════════════════════════════════════════════
    CV DOWNLOAD HANDLER
    ════════════════════════════════════════════ */
 function initCVButton() {
-  const btn = $('#cv-btn');
-  if (!btn) return;
+  const cvButtons = $$('#cv-btn, #hero-cv-btn');
 
-  /* If no actual PDF is linked, show a friendly alert */
-  btn.addEventListener('click', (e) => {
-    const href = btn.getAttribute('href');
-    if (!href || href === 'yassa-cv.pdf') {
-      e.preventDefault();
-      alert('CV download will be available once the file is uploaded.\n\nLink your actual PDF by setting the href attribute on the Download CV button.');
-    }
-    /* If href is a real URL, the default behavior (download) kicks in */
+  cvButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const href = btn.getAttribute('href');
+      if (!href || href === '#' || href === 'yassa-cv.pdf') {
+        e.preventDefault();
+        alert(
+          'CV download will be available once the file is uploaded.\n\n' +
+          'Please update the href attribute with your actual CV PDF link.'
+        );
+      }
+    });
   });
 }
 
@@ -227,7 +297,7 @@ function initFooterYear() {
 }
 
 /* ════════════════════════════════════════════
-   SMOOTH SCROLL (fallback for older browsers)
+   SMOOTH SCROLL (fallback for anchor links)
    ════════════════════════════════════════════ */
 function initSmoothScroll() {
   $$('a[href^="#"]').forEach(anchor => {
@@ -267,11 +337,15 @@ function initShowMoreProjects() {
 
     const button = $('button', moreContainer);
     if (!button) return;
+    button.setAttribute('aria-expanded', 'false');
+
     const btnText = $('span', button);
     const icon = $('i', button);
 
     button.addEventListener('click', () => {
       const isExpanded = panel.classList.toggle('expanded');
+      button.setAttribute('aria-expanded', String(isExpanded));
+
       if (isExpanded) {
         if (btnText) btnText.textContent = 'Show Less';
         if (icon) icon.className = 'fa-solid fa-chevron-up';
@@ -298,10 +372,56 @@ function initShowMoreProjects() {
 }
 
 /* ════════════════════════════════════════════
+   EXPERIENCE TIMELINE PROGRESS OBSERVER
+   Drives .active / .completed on mobile.
+   Uses IntersectionObserver — zero scroll listener overhead.
+   ════════════════════════════════════════════ */
+function initExperienceObserver() {
+  const cards = $$('.exp-card');
+  if (!cards.length) return;
+
+  /* Recalculates which card is active and marks all others as
+     completed (past) or neither (upcoming) */
+  const update = () => {
+    let activeIdx = -1;
+
+    /* Walk from bottom to top; last card whose top edge is above
+       the viewport's 60% line becomes the active experience     */
+    cards.forEach((card, i) => {
+      const { top } = card.getBoundingClientRect();
+      if (top < window.innerHeight * 0.6) activeIdx = i;
+    });
+
+    cards.forEach((card, i) => {
+      if (i < activeIdx) {
+        card.classList.remove('active');
+        card.classList.add('completed');
+      } else if (i === activeIdx) {
+        card.classList.add('active');
+        card.classList.remove('completed');
+      } else {
+        card.classList.remove('active', 'completed');
+      }
+    });
+  };
+
+  /* IntersectionObserver triggers update() on any card entering
+     or leaving the viewport — far cheaper than a scroll handler */
+  const io = new IntersectionObserver(update, {
+    threshold: [0, 0.25, 0.5, 0.75, 1]
+  });
+  cards.forEach(card => io.observe(card));
+
+  /* Run once immediately so initial viewport state is correct  */
+  update();
+}
+
+/* ════════════════════════════════════════════
    INIT ALL
    ════════════════════════════════════════════ */
 function init() {
   initTheme();
+  initAvatarFallback();
   initNav();
   initScrollProgress();
   initBackToTop();
@@ -309,6 +429,7 @@ function init() {
   initTabs();
   initShowMoreProjects();
   initCVButton();
+  initExperienceObserver();
   initFooterYear();
   initSmoothScroll();
 }
@@ -319,4 +440,3 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
-
